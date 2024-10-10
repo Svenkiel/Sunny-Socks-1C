@@ -11,7 +11,6 @@
     <?php include 'nav/navbar.php'; ?>
 
     <h1>Welkom op de Service pagina</h1>
-    <p>Inhoud van de servicepagina...</p>
 
 </body>
 </html>
