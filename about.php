@@ -11,7 +11,7 @@
     <?php include 'nav/navbar.php'; ?>
 
     <h1>About</h1>
-    <p>...</p>
+    <p>..</p>
 
 </body>
 </html>
