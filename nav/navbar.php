@@ -23,24 +23,18 @@
 
     <!-- Menu items -->
     <ul class="nav-center">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Catalogue</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="services.php">Services</a></li>
+        <li><a href="catalogue.php">Catalogue</a></li>
+        <li><a href="about.php">About Us</a></li>
     </ul>
 
     <!-- Knoppen rechts -->
     <div class="nav-right">
-        <a href="#" class="contact-button">Contact</a>
+        <a href="contact.php" class="contact-button">Contact</a>
         <a href="#" class="icon"><img src="img/nav/user.svg" alt="User"></a> 
-        <a href="#" class="icon"><img src="img/nav/cart.svg" alt="Cart"></a>
+        <a href="cart.php" class="icon"><img src="img/nav/cart.svg" alt="Cart"></a>
     </div>
 </nav>
 </body>
-
-<!-- Footer
-<footer>
-    <p>&copy; 2021 Sunny Socks</p>
-</footer> -->
-
 </html>
