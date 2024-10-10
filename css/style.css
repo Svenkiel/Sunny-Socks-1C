@@ -4,6 +4,7 @@
     src: url('font/NexaBold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
+    color: #1E407A;
 }
 
 /* Nexa Light */
@@ -12,6 +13,7 @@
     src: url('font/NexaLight.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
+    color: #1E407A;
 }
 
 /* Reset alle marges en paddings naar 0 en maakt een box-sizing */
