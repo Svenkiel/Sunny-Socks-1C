@@ -191,14 +191,15 @@ body {
 }
 
 .product-item h3 {
-    font-size: 1.2em;
+    color: #1d3d70;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
 /* Product beschrijving */
 .product-item p {
     margin: 10px 0;
-    color: #555;
+    color: #1d3d70;
 }
 
 /* Product prijs */
@@ -234,4 +235,13 @@ body {
 
 .add-to-cart:hover {
     background-color: #1d3d70;
+}
+
+.show-all-button {
+    background-color: #1d3d70;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
 }
