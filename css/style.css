@@ -16,7 +16,7 @@
     color: #1E407A;
 }
 
-/* Reset alle marges en paddings naar 0 en maakt een box-sizing */
+/* Reset marges en padding */
 * {
     margin: 0;
     padding: 0;
@@ -25,94 +25,213 @@
 
 /* Basis styling voor de body */
 body {
-    font-family: 'Nexa', sans-serif; /* Nexa lettertype */
+    font-family: 'Nexa', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 /* Topbar Styling */
 .top-bar {
-    background-color: #FECD3E; /* Gele kleur achtergrond */
-    color: white; /* Witte tekstkleur */
-    text-align: center; /* Centraal uitlijnen van de tekst */
-    padding: 10px 0; /* Verticale padding van 10px */
-    font-size: 14px; /* Lettergrootte van 14px */
-    width: 100%; /* Volledige breedte van de pagina */
+    background-color: #FECD3E; /* Gele achtergrond */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
 }
 
 /* Navbar Styling */
 .navbar {
-    display: flex; /* Gebruik flexbox voor lay-out */
-    justify-content: space-between; /* Verdeel items met ruimte ertussen */
-    align-items: center; /* Zorg ervoor dat alle items verticaal gecentreerd zijn */
-    background-color: white; /* Witte achtergrondkleur */
-    padding: 20px; /* Padding van 20px rondom */
-    border-bottom: 2px solid #FECD3E; /* Gele onderlijn */
-    width: 100%; /* Volledige breedte van de pagina */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 2px solid #FECD3E;
+    width: 100%;
 }
 
 /* Logo styling */
 .logo {
-    display: flex; /* Flexbox voor het logo */
-    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    max-height: 60px; /* Maximale hoogte van het logo is 60px */
-    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+    max-height: 60px; /* Logo hoogte */
+    width: auto;
 }
 
+/* Iconen */
 .icon {
-    display: flex; /* Flexbox voor het logo */
-    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+    display: flex;
+    align-items: center;
 }
 
 .icon img {
-    max-height: 30px; /* Maximale hoogte van het logo is 60px */
-    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+    max-height: 30px;
+    width: auto;
 }
 
 .icon img:hover {
-    cursor: pointer; /* Verander de cursor in een handje bij hover */
+    cursor: pointer;
 }
 
-/* Navigatielinks in het midden */
+/* Navigatielinks */
 .nav-center {
-    list-style: none; /* Verwijder bullet points van de lijst */
-    display: flex; /* Zet de links naast elkaar */
-    gap: 20px; /* Ruimte van 20px tussen de links */
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-center li a {
-    text-decoration: none; /* Verwijder de onderstreping van de links */
-    color: #1C3D77; /* Donkerblauwe kleur voor de tekst */
-    font-weight: bold; /* Vette tekst */
+    text-decoration: none;
+    color: #1C3D77;
+    font-weight: bold;
 }
 
 .nav-center li a:hover {
-    text-decoration: underline; /* Onderstreep de link bij hover */
+    text-decoration: underline;
 }
 
-/* Rechterkant met iconen en de contactknop */
+/* Rechterkant van de navbar */
 .nav-right {
-    display: flex; /* Flexbox voor de iconen en contactknop */
-    align-items: center; /* Verticaal centreren van de iconen */
-    gap: 20px; /* Ruimte van 20px tussen de iconen en de knop */
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Styling van de contactknop */
+/* Contactknop */
 .contact-button {
-    border: 2px solid #1C3D77; /* Donkerblauwe rand */
-    padding: 8px 16px; /* Padding rondom de knop */
-    border-radius: 5px; /* Ronde hoeken van 5px */
-    background-color: white; /* Witte achtergrond */
-    color: #1C3D77; /* Donkerblauwe tekstkleur */
-    text-decoration: none; /* Verwijder de onderstreping van de link */
-    font-weight: bold; /* Vette tekst */
+    border: 2px solid #1C3D77;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: white;
+    color: #1C3D77;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .contact-button:hover {
-    background-color: #1C3D77; /* Donkerblauwe achtergrond bij hover */
-    color: white; /* Witte tekstkleur bij hover */
+    background-color: #1C3D77;
+    color: white;
 }
 
+/* Title Styling */
+.title-container {
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Pagina titel */
+.page-title {
+    font-weight: bold;
+    color: #1d3d70;
+    border-top: 5px solid #1d3d70;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+/* Filterbalk */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.filter-bar input[type="search"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.filter-button {
+    background-color: #1d3d70;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Product item */
+.product-item {
+    background-color: #fff;
+    border: 1.5px solid #1d3d70;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect op product */
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    border: #1C3D77 1.5px solid;
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Product beschrijving */
+.product-item p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Product prijs */
+.product-item .price {
+    font-weight: bold;
+    color: #1d3d70;
+    margin-bottom: 15px;
+}
+
+/* Hoeveelheid invoer en cart button */
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Voeg toe aan winkelwagen knop */
+.add-to-cart {
+    background-color: #1d3d70;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #1d3d70;
+}
