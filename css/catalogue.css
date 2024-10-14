@@ -4,7 +4,6 @@
     src: url('font/NexaBold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
-    color: #1E407A;
 }
 
 /* Nexa Light */
@@ -13,7 +12,6 @@
     src: url('font/NexaLight.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
-    color: #1E407A;
 }
 
 /* Reset marges en padding */
@@ -28,6 +26,7 @@ body {
     font-family: 'Nexa', sans-serif;
     margin: 0;
     padding: 0;
+    color: #1d3d70; /* Consistente tekstkleur */
 }
 
 /* Topbar Styling */
@@ -71,9 +70,6 @@ body {
 .icon img {
     max-height: 30px;
     width: auto;
-}
-
-.icon img:hover {
     cursor: pointer;
 }
 
@@ -110,6 +106,7 @@ body {
     color: #1C3D77;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-button:hover {
@@ -119,7 +116,13 @@ body {
 
 /* Title Styling */
 .title-container {
-    text-align: center;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    gap: 20px;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
     padding-top: 100px;
 }
 
@@ -135,9 +138,12 @@ body {
 /* Filterbalk */
 .filter-bar {
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 10px;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .filter-bar input[type="search"] {
@@ -162,7 +168,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -172,22 +178,24 @@ body {
     border: 1.5px solid #1d3d70;
     border-radius: 15px;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     transition: transform 0.2s ease;
 }
 
-/* Hover effect op product */
 .product-item:hover {
     transform: scale(1.05);
 }
 
 .product-item img {
-    border: #1C3D77 1.5px solid;
+    border: 1.5px solid #1C3D77;
     border-radius: 15px;
     width: 50%;
     height: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-item h3 {
@@ -196,23 +204,51 @@ body {
     margin-bottom: 10px;
 }
 
-/* Product beschrijving */
 .product-item p {
     margin: 10px 0;
     color: #1d3d70;
 }
 
-/* Product prijs */
 .product-item .price {
     font-weight: bold;
     color: #1d3d70;
     margin-bottom: 15px;
 }
 
+/* Media Queries voor responsiviteit */
+
+/* Schermen kleiner dan 768px (tablets en kleiner) */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Twee kolommen voor tablets */
+    }
+
+    .product-item h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Schermen kleiner dan 480px (mobiele apparaten) */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Één kolom voor mobiele apparaten */
+    }
+
+    .product-item img {
+        width: 25%; /* Maak afbeeldingen kleiner op mobiele apparaten */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-item h3 {
+        font-size: 1.2em;
+    }
+}
+
 /* Hoeveelheid invoer en cart button */
 .quantity {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     gap: 10px;
 }
@@ -234,7 +270,7 @@ body {
 }
 
 .add-to-cart:hover {
-    background-color: #1d3d70;
+    background-color: #16345f;
 }
 
 .show-all-button {
@@ -243,5 +279,5 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"> <!-- Koppel het externe CSS-bestand -->
+    <link rel="stylesheet" href="css/catalogue.css"> 
     <title>Catalogue</title>
 </head>
 <body>
@@ -13,12 +13,10 @@
     <div class="title-container">
         <h1 class="page-title">CATALOGUE</h1>
     </div>
-
     <div class="filter-bar">
         <form method="GET" action="catalogue.php">
             <input type="search" name="search" placeholder="Search" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
             <button type="submit" class="filter-button">Zoek</button>
-            <!-- "Show All" knop die de zoekterm reset -->
             <a href="catalogue.php" class="show-all-button">Show All</a>
         </form>
     </div>
@@ -53,8 +51,7 @@
                 }
                 echo '<p class="price">' . $product["price"] . '</p>';
                 echo '<div class="quantity">
-                        <input type="number" min="1" max="10" value="1">
-                        <button class="add-to-cart">In Cart</button>
+                        <button class="add-to-cart">Add to Cart</button>
                       </div>';
                 echo '</div>';
             }
@@ -65,15 +62,14 @@
             // Als er geen zoekterm is ingevoerd, toon alle producten
             foreach ($products as $product) {
                 echo '<div class="product-item">';
-                echo '<img src="' . $product["image"] . '" alt="' . $product["name"] . '">';
+                echo '<a href="single_product.php"><img src="' . $product["image"] . '" alt="' . $product["name"] . '"><a/>';
                 echo '<h3>' . $product["name"] . '</h3>';
                 if (isset($product["description"])) {
                     echo '<p>' . $product["description"] . '</p>';
                 }
                 echo '<p class="price">' . $product["price"] . '</p>';
                 echo '<div class="quantity">
-                        <input type="number" min="1" max="10" value="1">
-                        <button class="add-to-cart">In Cart</button>
+                        <button class="add-to-cart">Add to Cart</button>
                       </div>';
                 echo '</div>';
             }
