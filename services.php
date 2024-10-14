@@ -12,8 +12,8 @@
 
     <main>
         
-        <div class="title-container">
-            <h1 class="page-title">SERVICES</h1>
+        <div class="services-container">
+            <h1 class="services-title">SERVICES</h1>
         </div>
 
         <div class="SES-container">

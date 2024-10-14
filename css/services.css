@@ -27,6 +27,7 @@ body {
     font-family: 'Nexa', sans-serif;
     margin: 0;
     padding: 0;
+    color: #1E407A;
 }
 
 main {
@@ -39,13 +40,13 @@ main {
 }
 
 /* Title Styling */
-.title-container {
+.services-container {
     text-align: left;
     padding-top: 100px;
 }
 
 /* Pagina titel */
-.page-title {
+.services-title {
     font-weight: bold;
     color: #1d3d70;
     border-top: 5px solid #1d3d70;
@@ -54,22 +55,25 @@ main {
 }
 
 .SES-container{
-    grid-area: 2/3/1/2;
+    grid-area: 2/1/2/2;
     text-align: left;
     padding-top: 50px;
 }
 
 .AIE-container{
+    grid-area: 3/2/4/3;
     text-align: left;
     padding-top: 50px;
 }
 
 .HE-container{
+    grid-area: 4/1/4/2;
     text-align: left;
     padding-top: 50px;
 }
 
 .EC-container{
+    grid-area: 5/2/6/3;
     text-align: left;
     padding-top: 50px;
 }
