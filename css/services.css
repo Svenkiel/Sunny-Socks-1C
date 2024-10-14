@@ -15,3 +15,16 @@
     font-style: normal;
     color: #1E407A;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basis styling voor de body */
+body {
+    font-family: 'Nexa', sans-serif;
+    margin: 0;
+    padding: 0;
+}
