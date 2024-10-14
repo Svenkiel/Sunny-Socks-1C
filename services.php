@@ -13,11 +13,13 @@
     <h1>Services</h1>
 
     <main>
+    <div class="H3">   
         <h3>Socks Express Service</h3>
-        <p> 
-            Socks Express Service is a fast and convenient solution for 
-            delivering high-quality socks directly to customers' doors.
-        </p>
+            <p> 
+                Socks Express Service is a fast and convenient solution for 
+                delivering high-quality socks directly to customers' doors.
+            </p>
+    </div>    
 
         <h4>Afterpay In Europe</h4>
         <p> 
