@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/about.css" type="text/css">
     <title>ABOUT US</title>
 </head>
 <body>
@@ -60,6 +61,7 @@
     </p>
 
     <hr>
+    <hr>
     <!-- img rechts van h2 tag -->
     <h2>Sustainable and Practical 
     Packaging
@@ -68,6 +70,7 @@
     <p>
     At Sunny Socks, we believe in sustainability. Our packaging is simple yet sturdy, designed to protect the products during transit while minimizing environmental impact. Each sock is folded neatly with a recycled cardboard holder, indicating size and brand, ready to ship directly to your business.
     </p>
+    
 
 
 
