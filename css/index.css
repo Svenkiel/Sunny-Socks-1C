@@ -157,33 +157,47 @@ main {
     margin-top: 5rem;
 }
 
-.punten {
+.points {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     color: #1C3D77;
 }
 
+.points-btn {
+    background-color: #FECD3E;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    right: 200px;
+    transform: rotate(140deg);
+}
+
 .home-title {
     color: #1C3D77;
     font-size: 56px;
     width: 300px;
+    border-top: 5px solid #1d3d70;
 }
 
-.punten > div > h1, h2 {
+.points > div > h1, h2 {
     display: inline;
 }
 
-.punten > div > h1 {
+.points > div > h1 {
     font-size: 56px;
     margin-right: 1rem;
 }
 
-.punten > div > h2 {
+.points > div > h2 {
     font-size: 36px;
 }
 
-.een, .twee {
+.point-one, .point-two {
     border-bottom: #FECD3E 1px solid;
     padding-bottom: 1rem;
 }
