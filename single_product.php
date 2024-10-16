@@ -96,7 +96,6 @@
 
             echo '<p class="description">' . $product["description"] . '</p>';
 
-
             // Toon kleur- en maatopties
             echo '<div class="product-options">';
             echo '<div class="size-options"><label>Size:</label>';
@@ -118,29 +117,42 @@
             echo '</div>';
             echo '</div>';
             echo '</div>';
+
+            // Tabs for Description, Additional Information, and Reviews
+            echo '<div class="tabs">';
+            echo '<button class="tablinks active" onclick="openTab(event, \'Description\')">Description</button>';
+            echo '<button class="tablinks" onclick="openTab(event, \'AdditionalInformation\')">Additional Information</button>';
+            echo '<button class="tablinks" onclick="openTab(event, \'Reviews\')">Reviews</button>';
+            echo '</div>';
+
+            echo '<div id="Description" class="tabcontent">';
+            echo '<div class="detailed-description">';
+            echo '<p>Step into comfort and style with our premium ' . strtolower($product["name"]) . '. Crafted from high-quality organic cotton, these socks offer both durability and a soft feel against your skin. Available in a vibrant array of solid colors, they\'re perfect for adding a pop of personality to any outfit.</p>';
+            echo '<h3>Key features:</h3>';
+            echo '<ul>';
+            echo '<li>Made from high-quality organic cotton</li>';
+            echo '<li>Available in multiple solid colors</li>';
+            echo '<li>Sizes: ' . implode(', ', $product["sizes"]) . ' to ensure the perfect fit</li>';
+            echo '<li>Versatile for casual or formal wear</li>';
+            echo '<li>Priced at ' . $product["price"] . ' per pair</li>';
+            echo '</ul>';
+            echo '<p>Whether you\'re dressing up for work or keeping it casual on the weekend, these socks provide the perfect finishing touch. Their uniform color design makes them ideal for pairing with any ensemble. With a 5-star rating from our satisfied customers, you can trust in the quality and comfort of these essential wardrobe staples.</p>';
+            echo '<p>Add a splash of color to your sock drawer today! Simply select your preferred size and color, choose the quantity, and click "Add to cart" to make these fantastic socks yours.</p>';
+            echo '</div>';
+            echo '</div>';
+
+            echo '<div id="AdditionalInformation" class="tabcontent" style="display:none;">';
+            echo '<p>More product details here.</p>';
+            echo '</div>';
+
+            echo '<div id="Reviews" class="tabcontent" style="display:none;">';
+            echo '<p>5 Customer Reviews</p>';
+            echo '</div>';
+
         } else {
             echo '<p>Product not found.</p>';
         }
         ?>
-
-        <!-- Tabs for Description, Additional Information, and Reviews -->
-        <div class="tabs">
-            <button class="tablinks active" onclick="openTab(event, 'Description')">Description</button>
-            <button class="tablinks" onclick="openTab(event, 'AdditionalInformation')">Additional Information</button>
-            <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
-        </div>
-
-        <div id="Description" class="tabcontent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-        <div id="AdditionalInformation" class="tabcontent" style="display:none;">
-            <p>More product details here.</p>
-        </div>
-        <div id="Reviews" class="tabcontent" style="display:none;">
-            <p>5 Customer Reviews</p>
-        </div>
-    </div>
-
     <script>
         // JavaScript om de afbeelding te wijzigen op basis van de kleurkeuze
         document.querySelectorAll('.color-button').forEach(button => {
