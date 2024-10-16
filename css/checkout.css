@@ -1,0 +1,173 @@
+/* Nexa Bold */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Nexa Light */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Reset marges en padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basis styling voor de body */
+body {
+    font-family: 'Nexa', sans-serif;
+    color: #1d3d70; /* Consistente tekstkleur */;
+}
+
+/* Topbar Styling */
+.top-bar {
+    background-color: #FECD3E; /* Gele achtergrond */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 2px solid #FECD3E;
+    width: 100%;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 60px; /* Logo hoogte */
+    width: auto;
+}
+
+/* Iconen */
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon img {
+    max-height: 30px;
+    width: auto;
+    cursor: pointer;
+}
+
+/* Navigatielinks */
+.nav-center {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: #1C3D77;
+    font-weight: bold;
+}
+
+.nav-center li a:hover {
+    text-decoration: underline;
+}
+
+/* Rechterkant van de navbar */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contactknop */
+.contact-button {
+    border: 2px solid #1C3D77;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: white;
+    color: #1C3D77;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #1C3D77;
+    color: white;
+}
+
+.checkout-title-container {
+    grid-column: 2/3;
+    padding-top: 75px;
+    padding-bottom: 40px;
+}
+
+/* Pagina titel */
+.page-title {
+    font-weight: bold;
+    color: #1d3d70;
+    border-top: 5px solid #1d3d70;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+}
+
+.billing-details {
+    grid-column: 2/3;
+}
+
+.billing-details > h2 {
+    margin-bottom: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Zet label boven input */
+    margin-bottom: 25px; /* Witruimte tussen onderdelen */
+}
+
+.extra-margin {
+    margin-bottom: 50px;
+}
+
+.form-row {
+    display: flex;
+}
+
+label {
+    margin-bottom: 20px; /* Witruimte tussen label en input */
+    color: #1d3d70;
+    font-weight: bold;
+}
+
+input,select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Nexa', sans-serif;
+    font-weight: bold;
+    color: #9F9F9F;
+    height: 50px;
+    max-width: 50%;
+    background-color: white;
+}
