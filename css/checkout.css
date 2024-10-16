@@ -154,13 +154,13 @@ body {
     display: flex;
 }
 
-label {
+.form-group > label {
     margin-bottom: 20px; /* Witruimte tussen label en input */
     color: #1d3d70;
     font-weight: bold;
 }
 
-input,select {
+.form-group > input, select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -170,4 +170,72 @@ input,select {
     height: 50px;
     max-width: 50%;
     background-color: white;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d3d70;
+    border-radius: 10px;
+    height: 62%;
+    color: white;
+    padding-inline: 2.5em;
+    padding-block: 60px;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.75rem;
+}
+
+td:nth-child(1) {
+    width: 20%;
+}
+
+td:nth-child(2) {
+    width: 50%;
+}
+
+td:nth-child(3) {
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+}
+
+.total-price {
+    color: #FECD3E;
+}
+
+hr {
+    margin-block: 1.75rem;
+}
+
+.radio-section > label, input {
+    margin-right: 10px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.radio-desc {
+    color: #9F9F9F;
+    margin-block: 0.5rem;
+}
+
+.final-desc {
+    margin-block: 4rem;
+}
+
+.place-order-button {
+    align-self: center;
+    text-decoration: none;
+    background-color: #FECD3E;
+    border-radius: 15px;
+    color: #1d3d70;
+    padding: 18px 20%;
+    margin-bottom: 4rem;
+    font-size: 20px;
 }

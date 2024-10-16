@@ -20,7 +20,7 @@
         <div class="billing-details">
             <h2>Billing details</h2>
 
-            <form>
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="vnaam">First Name</label>
@@ -88,6 +88,55 @@
                 </div>
 
             </form>
+        </div>
+
+        <div class="summary">
+            <table>
+                <tr>
+                    <td><h3>Product</h3></td>
+                    <td>&nbsp;</td>
+                    <td><h3>Subtotal</h3></td>
+                </tr>
+                <tr>
+                    <td>Uni Green</td>
+                    <td>X 100</td>
+                    <td>€4,495</td>
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>&nbsp;</td>
+                    <td>€4,595</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>&nbsp;</td>
+                    <td><h3 class="total-price">€4,595</h3></td>
+                </tr>
+            </table>
+            
+            <hr>
+
+            <div class="radio-section">
+                <input type="radio" name="radio" id="bank">
+                <label for="bank">Direct Bank Transfer</label>
+
+                <p class="radio-desc">
+                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. 
+                    Your order will not be shipped until the funds have cleared in our account.
+                </p>
+            
+                <input type="radio" name="radio" id="afterpay">
+                <label for="afterpay">After Pay</label>
+
+                <p class="radio-desc">Only available in Europe. Place your order now, pay once you receive your order.</p>
+            </div>
+
+            <p class="final-desc">
+                Your personal data will be used to support your experience throughout this website, to manage access 
+                to your account, and for other purposes described in our privacy policy.
+            </p>
+
+            <a href="index.php" class="place-order-button"><b>Place order</b></a>
         </div>
 </body>
 </html>
