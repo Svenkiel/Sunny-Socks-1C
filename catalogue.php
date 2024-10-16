@@ -16,7 +16,7 @@
     <div class="filter-bar">
         <form method="GET" action="catalogue.php">
             <input type="search" name="search" placeholder="Search" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-            <button type="submit" class="filter-button">Zoek</button>
+            <button type="submit" class="filter-button">Search</button>
             <a href="catalogue.php" class="show-all-button">Show All</a>
         </form>
     </div>

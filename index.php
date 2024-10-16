@@ -10,6 +10,47 @@
 
     <?php include 'nav/navbar.php'; ?>
 
+    <div class="popup">
+        <div class="popup-content">
+            <div class="close">&times;</div>
+            <h1>10%</h1><h1 class="yellow-off"> OFF</h1>
+            <p>Enter you Email and receive 10% off your next order.</p>
+            <?php
+                if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+                    $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+
+                    if($email == !false){
+                        echo 'Here is your coupon:';
+                    }
+                    else{
+                        echo 'Please use a valid email adress';
+                        echo '
+                        <form action="' . $_SERVER['PHP_SELF']. '" method="POST">
+                            <input type="text" name="email" id="email" placeholder="Email:" class="form-input">
+                            <input type="submit" value="CONTINUE" class="submit">
+                        </form>
+                    
+                    ';
+                    }
+                       
+                }
+                else{
+                    echo '
+                        <form action="' . $_SERVER['PHP_SELF']. '" method="POST">
+                            <input type="text" name="email" id="email" placeholder="Email:" class="form-input">
+                            <input type="submit" value="CONTINUE" class="submit">
+                        </form>
+                    
+                    ';
+                }
+            ?>
+        </div>
+    </div>
+
+
+
+
     <main>
         <div class="home-top">
             <img src="img/Sunny_socks_blue.jpg" alt="Sok" class="background">
@@ -94,10 +135,61 @@
                 <button class="carousel-btn right-btn">&#8594;</button>
             </div>
 
-            <script src="javascript/index.js"></script>
+
 
         </div>
     </main>
+
+    <script>
+        var popup = document.getElementsByClassName("popup")[0];
+
+        var span = document.getElementsByClassName("close")[0];
+
+        window.onload = function() {
+        popup.style.display = "block";
+        }
+
+        span.onclick = function() {
+        popup.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+        }
+
+        const carousel = document.querySelector('.carousel');
+                const leftBtn = document.querySelector('.left-btn');
+                const rightBtn = document.querySelector('.right-btn');
+
+                let scrollPosition = 0;
+                const carouselItems = document.querySelectorAll('.carousel-item');
+                const itemWidth = carouselItems[0].clientWidth + 20; 
+
+                
+                rightBtn.addEventListener('click', () => {
+                    if (scrollPosition < carousel.scrollWidth - carousel.clientWidth) {
+                        scrollPosition += itemWidth * 3; 
+                        carousel.scrollTo({
+                            left: scrollPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+
+                leftBtn.addEventListener('click', () => {
+                    if (scrollPosition > 0) {
+                        scrollPosition -= itemWidth * 3; 
+                        carousel.scrollTo({
+                            left: scrollPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+
+
+    </script>
 
 </body>
 </html>
