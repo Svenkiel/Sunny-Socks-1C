@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/catalogue.css"> 
-    <link rel="stylesheet" href="css/single_product.css"> 
+    <!-- <link rel="stylesheet" href="css/single_product.css">  -->
     <title>Product Details</title>
 </head>
 <body>
@@ -88,16 +88,23 @@
             echo '<div class="product-info">';
             echo '<h1>' . $product["name"] . '</h1>';
             echo '<p class="price">' . $product["price"] . '</p>';
+
+            // Star Rating
+            echo '<div class="rating">';
+            echo '<span>★★★★★</span> <span>5 Customer Reviews</span>';
+            echo '</div>';
+
             echo '<p class="description">' . $product["description"] . '</p>';
+
 
             // Toon kleur- en maatopties
             echo '<div class="product-options">';
-            echo '<div class="size-options"><label>Maat:</label>';
+            echo '<div class="size-options"><label>Size:</label>';
             foreach ($product["sizes"] as $size) {
                 echo '<button>' . $size . '</button>';
             }
             echo '</div>';
-            echo '<div class="color-options"><label>Kleur:</label>';
+            echo '<div class="color-options"><label>Color:</label>';
             foreach ($product["colors"] as $colorOption) {
                 echo '<button class="color-button" style="background-color: ' . $colorOption['color'] . ';" data-image="' . $colorOption['image'] . '"></button>';
             }
@@ -106,15 +113,32 @@
 
             // Voeg winkelwagen knop toe
             echo '<div class="add-to-cart">';
-            echo '<div class="quantity"><label>Aantal:</label><input type="number" value="1" min="1"></div>';
-            echo '<button class="add-button">Voeg toe aan winkelwagen</button>';
+            echo '<div class="quantity"><label>Quantity:</label><input type="number" value="1" min="1"></div>';
+            echo '<button class="add-button">Add to cart</button>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
         } else {
-            echo '<p>Product niet gevonden.</p>';
+            echo '<p>Product not found.</p>';
         }
         ?>
+
+        <!-- Tabs for Description, Additional Information, and Reviews -->
+        <div class="tabs">
+            <button class="tablinks active" onclick="openTab(event, 'Description')">Description</button>
+            <button class="tablinks" onclick="openTab(event, 'AdditionalInformation')">Additional Information</button>
+            <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
+        </div>
+
+        <div id="Description" class="tabcontent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div id="AdditionalInformation" class="tabcontent" style="display:none;">
+            <p>More product details here.</p>
+        </div>
+        <div id="Reviews" class="tabcontent" style="display:none;">
+            <p>5 Customer Reviews</p>
+        </div>
     </div>
 
     <script>
@@ -127,6 +151,21 @@
                 document.getElementById('product-image').src = newImage;
             });
         });
+
+        // Tabs switcher
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 
 </body>
