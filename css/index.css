@@ -1,0 +1,341 @@
+/* Nexa Bold */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Nexa Light */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Reset alle marges en paddings naar 0 en maakt een box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basis styling voor de body */
+body {
+    font-family: 'Nexa', sans-serif; /* Nexa lettertype */
+    margin: 0;
+    padding: 0;
+}
+
+/* Topbar Styling */
+.top-bar {
+    background-color: #FECD3E; /* Gele kleur achtergrond */
+    color: white; /* Witte tekstkleur */
+    text-align: center; /* Centraal uitlijnen van de tekst */
+    padding: 10px 0; /* Verticale padding van 10px */
+    font-size: 14px; /* Lettergrootte van 14px */
+    width: 100%; /* Volledige breedte van de pagina */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex; /* Gebruik flexbox voor lay-out */
+    justify-content: space-between; /* Verdeel items met ruimte ertussen */
+    align-items: center; /* Zorg ervoor dat alle items verticaal gecentreerd zijn */
+    background-color: white; /* Witte achtergrondkleur */
+    padding: 20px; /* Padding van 20px rondom */
+    border-bottom: 2px solid #FECD3E; /* Gele onderlijn */
+    width: 100%; /* Volledige breedte van de pagina */
+}
+
+/* Logo styling */
+.logo {
+    display: flex; /* Flexbox voor het logo */
+    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+}
+
+.logo img {
+    max-height: 60px; /* Maximale hoogte van het logo is 60px */
+    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+}
+
+.icon {
+    display: flex; /* Flexbox voor het logo */
+    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+}
+
+.icon img {
+    max-height: 30px; /* Maximale hoogte van het logo is 60px */
+    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+}
+
+.icon img:hover {
+    cursor: pointer; /* Verander de cursor in een handje bij hover */
+}
+
+/* Navigatielinks in het midden */
+.nav-center {
+    list-style: none; /* Verwijder bullet points van de lijst */
+    display: flex; /* Zet de links naast elkaar */
+    gap: 20px; /* Ruimte van 20px tussen de links */
+}
+
+.nav-center li a {
+    text-decoration: none; /* Verwijder de onderstreping van de links */
+    color: #1C3D77; /* Donkerblauwe kleur voor de tekst */
+    font-weight: bold; /* Vette tekst */
+}
+
+.nav-center li a:hover {
+    text-decoration: underline; /* Onderstreep de link bij hover */
+}
+
+/* Rechterkant met iconen en de contactknop */
+.nav-right {
+    display: flex; /* Flexbox voor de iconen en contactknop */
+    align-items: center; /* Verticaal centreren van de iconen */
+    gap: 20px; /* Ruimte van 20px tussen de iconen en de knop */
+}
+
+/* Styling van de contactknop */
+.contact-button {
+    border: 2px solid #1C3D77; /* Donkerblauwe rand */
+    padding: 8px 16px; /* Padding rondom de knop */
+    border-radius: 5px; /* Ronde hoeken van 5px */
+    background-color: white; /* Witte achtergrond */
+    color: #1C3D77; /* Donkerblauwe tekstkleur */
+    text-decoration: none; /* Verwijder de onderstreping van de link */
+    font-weight: bold; /* Vette tekst */
+}
+
+.contact-button:hover {
+    background-color: #1C3D77; /* Donkerblauwe achtergrond bij hover */
+    color: white; /* Witte tekstkleur bij hover */
+}
+
+main {
+    margin: 1em;
+    padding: 6em 10em;
+}
+.home-top{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+}
+
+.home-top > p {
+    font-size: 24px;
+    color: #1C3D77;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 750px;
+    top: 14rem;
+    right: 5rem;
+}
+
+.sunny-logo {
+    width: 590px;
+}
+
+.catalogue-button {
+    text-decoration: none;
+    background-color: #1C3D77;
+    border-radius: 4px;
+    color: #FECD3E;
+    width: fit-content;
+    padding: 18px 40px;
+}
+
+.home-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: #1C3D77;
+}
+
+.points-btn {
+    background-color: #FECD3E;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    right: 200px;
+    transform: rotate(140deg);
+}
+
+.home-title {
+    color: #1C3D77;
+    font-size: 56px;
+    width: 300px;
+    border-top: 5px solid #1d3d70;
+}
+
+.points > div > h1, h2 {
+    display: inline;
+}
+
+.points > div > h1 {
+    font-size: 56px;
+    margin-right: 1rem;
+}
+
+.points > div > h2 {
+    font-size: 36px;
+}
+
+.point-one, .point-two {
+    border-bottom: #FECD3E 1px solid;
+    padding-bottom: 1rem;
+}
+
+.home-bottom {
+    margin-top: 5rem;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 70%;
+    max-width: 1200px;
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    background-color: #1C3D77;
+    color: #FECD3E;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.carousel-item > h3 {
+    margin-bottom: 2em;
+}
+
+.carousel-btn {
+    background-color: #FECD3E;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    border-radius: 50%;
+    color: white;
+}
+
+.carousel-btn:hover {
+    background-color: #ffbf00; 
+}
+
+.left-btn {
+    left: -50px;
+}
+
+.right-btn {
+    right: -50px;
+}
+
+.popup {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
+  
+  .popup-content {
+    background-color: #1C3D77;
+    margin: 15% auto;
+    padding: 40px 20px;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+  }
+
+  .popup-content > h1 {
+    display: inline;
+    font-size: 56px;
+  }
+
+  .yellow-off {
+    color: #FECD3E;
+  }
+
+  .popup-content > p {
+    font-size: 24px;
+  }
+
+  .popup-content > form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .form-input {
+    height: 25px;
+    font-size: 20px;
+    color: #1C3D77;
+    outline: none;
+  }
+
+  .submit {
+    height: 40px;
+    background-color: #FECD3E;
+    color: #1C3D77;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .popup-content > h1, p, input {
+    margin: 1rem 0;
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
