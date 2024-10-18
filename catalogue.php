@@ -26,7 +26,7 @@
         // Producten array
         $products = [
             1 => ["name" => "Uniform colour socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/Sunny_socks_uni_blue.jpg"],
-            2 => ["name" => "Classic strip socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/Sunny_socks_blue.jpg"],
+            2 => ["name" => "Classic striped socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/Sunny_socks_blue.jpg"],
             3 => ["name" => "Military grade socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/military_socks.jpg"],
             4 => ["name" => "Construction socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/construction_socks.jpg"],
             5 => ["name" => "Oil & Gas socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/oil_gas_socks.jpg"],
