@@ -116,56 +116,88 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    width: 80%;
-    margin: 0 auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: 5rem;
 }
 
-/* Title Styling */
-.services-container {
-    text-align: left;
-    padding-top: 100px;
+h1 {
+    color: #1C3D77;
+    margin: 100px auto;
 }
 
-/* Pagina titel */
-.services-title {
+.title {
+    color: #1C3D77;
+    font-size: 56px;
+    border-top: 5px solid #1C3D77;
+    display: inline;
+    text-align: center;
+    margin-left: 3rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.form-field {
+    grid-column: 2/4;
+    margin-top: 7rem;
+}
+
+label, a {
+    color: #1C3D77;
+}
+
+input, label {
+    max-width: 400px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.login-register > input {
+    border: none;
+    outline: none;
+    padding: 5px 30px;
+    font-size: 24px;
+    background-color: #1C3D77;
+    border-radius: 4px;
+    color: #FECD3E;
+    cursor: pointer;
+}
+
+.login-form > input{
+    border: none;
+    outline: none;
+    border-bottom: 1px #FECD3E solid;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-btn {
+    background-color: #1C3D77;
+    padding: 12px 40px;
+    color: #FECD3E;
     font-weight: bold;
-    color: #1d3d70;
-    border-top: 5px solid #1d3d70;
-    padding-top: 10px;
-    display: inline-block;
+    border-radius: 4px;
+    margin: 0 auto;
+    text-decoration: none;
 }
 
-.SES-container{
-    grid-area: 2/1/2/2;
-    text-align: left;
-    padding-top: 50px;
+.home-btn:hover {
+    background-color: #152f5d; 
 }
 
-.AIE-container{
-    grid-area: 3/2/4/3;
-    text-align: left;
-    padding-top: 50px;
+.login-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.HE-container{
-    grid-area: 4/1/4/2;
-    text-align: left;
-    padding-top: 50px;
-}
 
-.EC-container{
-    grid-area: 5/2/6/3;
-    text-align: left;
-    padding-top: 50px;
-}
 
-.page-p{
-    padding-top: 1rem;
-    border-bottom: 2px solid yellow;
-    padding-bottom: 2px;
-    display: inline-block;
-}
+
+
 
