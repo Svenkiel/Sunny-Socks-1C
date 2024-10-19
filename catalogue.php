@@ -66,12 +66,40 @@
                     echo '<p>' . $product["description"] . '</p>';
                 }
                 echo '<p class="price">' . $product["price"] . '</p>';
-                echo '<button class="add-to-cart">Add to cart</button>';
+                echo '<button class="add-to-cart" onclick="addToCart()">Add to cart</button>';
                 echo '</div>';
             }
         }
         ?>
-    </div>
 
+        <script>
+            // Haal de cart count op uit localStorage, of stel het in op 0 als het niet bestaat
+            let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
+
+            // Function to update the cart counter
+            function updateCartCounter() {
+                const cartCounterElement = document.getElementById('cart-counter');
+                cartCounterElement.innerText = cartCount;
+
+                // Voeg de active klasse toe als cartCount groter is dan 0
+                if (cartCount > 0) {
+                    cartCounterElement.classList.add('active');
+                } else {
+                    cartCounterElement.classList.remove('active');
+                }
+            }
+
+            // Function to add items to the cart
+            function addToCart() {
+                cartCount++;
+                localStorage.setItem('cartCount', cartCount); // Sla de cart count op in localStorage
+                updateCartCounter();
+            }
+
+            // Update de cart counter bij het laden van de pagina
+            document.addEventListener('DOMContentLoaded', updateCartCounter);
+        </script>
+
+    </div>
 </body>
 </html>

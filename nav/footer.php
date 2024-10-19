@@ -11,7 +11,7 @@
 <nav class="footer">
 
     <div class="logo">
-    <img src="img/nav/logo.png" alt="Logo">
+    <img src="img/logo.png" alt="Logo">
     </div>
 
     <div class= footer-ul>
