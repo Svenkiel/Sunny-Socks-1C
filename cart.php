@@ -34,11 +34,13 @@
                         <td>Stripes Green</td>
                         <td>€13.00</td>
                         <td>
-                            <input type="text" name="quantity-1" id="quantity-1" value="100">
+                            <input type="text" name="quantity-1" id="quantity-1" value="100" onchange="calcSubtotal(this)">
                         </td>
-                        <td>€1300.00</td>
+                        <td class="subtotal">€1300.00</td>
                         <td>
-                            <img src="img/nav/bin.svg" alt="remove">
+                            <a class="remove-button" onclick="removeProduct(this)">
+                                <img src="img/nav/bin.svg" alt="remove">
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -48,11 +50,13 @@
                         <td>Stripes Blue</td>
                         <td>€13.00</td>
                         <td>
-                            <input type="text" name="quantity-2" id="quantity-2" value="75">
+                            <input type="text" name="quantity-2" id="quantity-2" value="75" onchange="calcSubtotal(this)">
                         </td>
-                        <td>€975.00</td>
+                        <td class="subtotal">€975.00</td>
                         <td>
-                            <img src="img/nav/bin.svg" alt="remove">
+                            <a class="remove-button" onclick="removeProduct(this)">
+                                <img src="img/nav/bin.svg" alt="remove">
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -62,11 +66,13 @@
                         <td>Uni Socks Blue</td>
                         <td>€10.00</td>
                         <td>
-                            <input type="text" name="quantity-3" id="quantity-3" value="50">
+                            <input type="text" name="quantity-3" id="quantity-3" value="50" onchange="calcSubtotal(this)">
                         </td>
-                        <td>€500.00</td>
+                        <td class="subtotal">€500.00</td>
                         <td>
-                            <img src="img/nav/bin.svg" alt="remove">
+                            <a class="remove-button" onclick="removeProduct(this)">
+                                <img src="img/nav/bin.svg" alt="remove">
+                            </a>
                         </td>
                     </tr>
                 </table>
@@ -78,15 +84,52 @@
             <table class="totals">
                 <tr>
                     <td>Subtotal</td>
-                    <td>€2775.00</td>
+                    <td class="total">€2775.00</td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td><h3>€2775.00</h3></td>
+                    <td class="total"><h3>€2775.00</h3></td>
                 </tr>
             </table>
 
             <a href="checkout.php" class="checkout-button"><b>Check Out</b></a>
         </div>
+
+    <script>
+        function removeProduct(element) {
+            alert("Product removed from cart");
+            const row = element.closest('tr');
+            row.remove();
+
+            calcTotal();
+        }
+        
+        function calcSubtotal(input) {
+            const row = input.closest('tr');
+            const priceCell = row.cells[2];
+            const price = parseFloat(priceCell.textContent.replace('€', ''));
+            const quantity = parseInt(input.value);
+            const subtotal = price * quantity;
+            const subtotalCell = row.querySelector('.subtotal');
+            subtotalCell.textContent = `€${subtotal.toFixed(2)}`;
+            
+            calcTotal();
+        }
+
+        function calcTotal() {
+            const subtotals = document.querySelectorAll('.subtotal');
+            let total = 0;
+
+            subtotals.forEach(subtotalCell => {
+                const subtotalText = subtotalCell.textContent.replace('€', '');
+                total += parseFloat(subtotalText);
+            });
+
+            const totalCells = document.querySelectorAll('.total');
+            totalCells.forEach(totalCell => {
+            totalCell.textContent = `€${total.toFixed(2)}`;
+            });
+        }
+    </script>
 </body>
 </html>

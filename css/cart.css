@@ -188,6 +188,11 @@ input {
     text-align: center;
 }
 
+.remove-button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .cart-totals {
     grid-row-start: 2;
     grid-column-start: 3;
