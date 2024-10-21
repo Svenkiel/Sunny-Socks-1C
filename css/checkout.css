@@ -151,6 +151,11 @@ body {
 
 .form-row {
     display: flex;
+    gap: 15px;
+}
+
+#vnaam, #anaam {
+    max-width: 100%;
 }
 
 .form-group > label {
@@ -176,7 +181,7 @@ body {
     flex-direction: column;
     background-color: #1d3d70;
     border-radius: 10px;
-    height: 62%;
+    height: 70%;
     color: white;
     padding: 60px 2.5em;
 }
@@ -216,6 +221,7 @@ hr {
     margin-right: 10px;
     vertical-align: middle;
     font-weight: bold;
+    accent-color: #FECD3E;
 }
 
 .radio-desc {
@@ -230,6 +236,7 @@ hr {
 .place-order-button {
     align-self: center;
     text-decoration: none;
+    cursor: pointer;
     background-color: #FECD3E;
     border-radius: 15px;
     color: #1d3d70;

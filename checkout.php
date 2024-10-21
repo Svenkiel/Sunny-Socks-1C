@@ -325,7 +325,6 @@
                 <div class="form-group">
                     <input type="text" name="overig" id="overig" placeholder="Additional information"/>
                 </div>
-
             </form>
         </div>
 
@@ -337,19 +336,29 @@
                     <td><h3>Subtotal</h3></td>
                 </tr>
                 <tr>
-                    <td>Uni Green</td>
+                    <td>Stripes Green</td>
                     <td>X 100</td>
-                    <td>€4,495</td>
+                    <td>€1300.00</td>
+                </tr>
+                <tr>
+                    <td>Stripes Blue</td>
+                    <td>X 75</td>
+                    <td>€975.00</td>
+                </tr>
+                <tr>
+                    <td>Uni Socks Blue</td>
+                    <td>X 50</td>
+                    <td>€500.00</td>
                 </tr>
                 <tr>
                     <td>Subtotal</td>
                     <td>&nbsp;</td>
-                    <td>€4,595</td>
+                    <td>€2775.00</td>
                 </tr>
                 <tr>
                     <td>Total</td>
                     <td>&nbsp;</td>
-                    <td><h3 class="total-price">€4,595</h3></td>
+                    <td><h3 class="total-price">€2775.00</h3></td>
                 </tr>
             </table>
             
@@ -375,7 +384,23 @@
                 to your account, and for other purposes described in our privacy policy.
             </p>
 
-            <a href="index.php" class="place-order-button"><b>Place order</b></a>
+            <a class="place-order-button" onclick="order()"><b>Place order</b></a>
         </div>
+    </div>
+    <script>
+        function order(){
+            alert("Order placed successfully");
+
+            const form = document.querySelector('form');
+            form.reset();
+
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(radioButton => {
+            radioButton.checked = false;
+            });
+            
+            window.location.href = "index.php";
+        }
+    </script>
 </body>
 </html>

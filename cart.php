@@ -94,7 +94,7 @@
 
             <a href="checkout.php" class="checkout-button"><b>Check Out</b></a>
         </div>
-
+    </div>
     <script>
         function removeProduct(element) {
             alert("Product removed from cart");
