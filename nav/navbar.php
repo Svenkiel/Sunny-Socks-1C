@@ -4,7 +4,9 @@
 
 <nav class="navbar">
     <div class="logo">
-        <img src="img/nav/logo.png" alt="Logo">
+        <a href="index.php">
+            <img src="img/nav/logo.png" alt="Logo">
+        </a>
     </div>
     <ul class="nav-center">
         <li><a href="index.php">Home</a></li>

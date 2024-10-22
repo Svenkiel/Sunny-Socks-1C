@@ -27,11 +27,11 @@
         <?php
         // Producten array
         $products = [
-            1 => ["name" => "Uniform colour socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/Sunny_socks_uni_blue.jpg"],
-            2 => ["name" => "Classic striped socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/Sunny_socks_blue.jpg"],
-            3 => ["name" => "Military grade socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/military_socks.jpg"],
-            4 => ["name" => "Construction socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/construction_socks.jpg"],
-            5 => ["name" => "Oil & Gas socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€10", "image" => "img/oil_gas_socks.jpg"],
+            1 => ["name" => "Uniform colour socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€18.99", "image" => "img/Sunny_socks_uni_blue.jpg"],
+            2 => ["name" => "Classic striped socks", "description" => "Available in multiple colours, made from high quality organic cotton", "price" => "€18.99", "image" => "img/Sunny_socks_blue.jpg"],
+            3 => ["name" => "Military grade socks", "description" => "Available in black only, made from high quality organic cotton", "price" => "€22.50", "image" => "img/military_socks.jpg"],
+            4 => ["name" => "Construction socks", "description" => "Available in black only, made from high quality organic cotton", "price" => "€19.99", "image" => "img/construction_socks.jpg"],
+            5 => ["name" => "Oil & Gas socks", "description" => "Available in black only, made from high quality organic cotton", "price" => "€19.99", "image" => "img/oil_gas_socks.jpg"],
         ];
 
         // Check of er een zoekterm is ingevoerd
@@ -52,7 +52,7 @@
                     echo '<p>' . $product["description"] . '</p>';
                 }
                 echo '<p class="price">' . $product["price"] . '</p>';
-                echo '<button class="add-to-cart">Add to cart</button>';
+                echo '<button class="add-to-cart" onclick="addToCart()">Add to cart</button>';
                 echo '</div>';
             }
         } elseif ($searchTerm && empty($filteredProducts)) {
@@ -91,7 +91,7 @@
                 }
             }
 
-            // Function to add items to the cart
+            // // Function to add items to the cart
             function addToCart() {
                 cartCount++;
                 localStorage.setItem('cartCount', cartCount); // Sla de cart count op in localStorage
@@ -101,7 +101,6 @@
             // Update de cart counter bij het laden van de pagina
             document.addEventListener('DOMContentLoaded', updateCartCounter);
         </script>
-
     </div>
 </body>
 
