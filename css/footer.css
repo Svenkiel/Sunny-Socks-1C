@@ -27,6 +27,11 @@ body {
     color: #1E407A;
 }
 
+.border-top {
+    border-top: yellow;
+    border-top-width: 5px;
+}
+
 footer {
     background-color: #F9F9F9;
     padding: 40px 20px;

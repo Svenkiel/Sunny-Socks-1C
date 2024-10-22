@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
     <title>Footer</title>
 </head>
 <body>
+
+<div class="border-top">
 
 <footer>
         <div class="footer-container">
@@ -54,8 +56,8 @@
                     </div>
                     <div class="language-selector">
                         <span>Language:</span>
-                        <img src="uk.png" alt="English">
-                        <img src="france.png" alt="French">
+                        <img src="img/footer/uk.png" alt="English">
+                        <img src="img/footer/france.png" alt="French">
                     </div>
                 </div>
 
@@ -75,7 +77,7 @@
             <a href="#">Cookies</a>
         </div>
     </footer>
-    
+</div>
 </body>
 </html>
         
