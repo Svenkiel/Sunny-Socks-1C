@@ -37,5 +37,21 @@
  
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+ 
+                <div class="file-upload">
+                    <label for="file-upload" class="custom-file-upload">
+                        <span>Upload Additional file</span>
+                        <input type="file" id="file-upload" name="file-upload">
+                    </label>
+                    <p class="file-note">Attach file. File size of your documents should not exceed 10MB</p>
+                </div>
+ 
+                <div class="checkbox">
+                    <input type="checkbox" id="nda" name="nda">
+                    <label for="nda">I want to protect my data by signing an NDA</label>
+                </div>
 </body>
 </html>
