@@ -1,4 +1,118 @@
-/*NEXA BOLD*/
+/* Nexa Bold */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Nexa Light */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Reset alle marges en paddings naar 0 en maakt een box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basis styling voor de body */
+body {
+    font-family: 'Nexa', sans-serif; /* Nexa lettertype */
+    margin: 0;
+    padding: 0;
+}
+
+/* Topbar Styling */
+.top-bar {
+    background-color: #FECD3E; /* Gele kleur achtergrond */
+    color: white; /* Witte tekstkleur */
+    text-align: center; /* Centraal uitlijnen van de tekst */
+    padding: 10px 0; /* Verticale padding van 10px */
+    font-size: 14px; /* Lettergrootte van 14px */
+    width: 100%; /* Volledige breedte van de pagina */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex; /* Gebruik flexbox voor lay-out */
+    justify-content: space-between; /* Verdeel items met ruimte ertussen */
+    align-items: center; /* Zorg ervoor dat alle items verticaal gecentreerd zijn */
+    background-color: white; /* Witte achtergrondkleur */
+    padding: 20px; /* Padding van 20px rondom */
+    border-bottom: 2px solid #FECD3E; /* Gele onderlijn */
+    width: 100%; /* Volledige breedte van de pagina */
+}
+
+/* Logo styling */
+.logo {
+    display: flex; /* Flexbox voor het logo */
+    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+}
+
+.logo img {
+    max-height: 60px; /* Maximale hoogte van het logo is 60px */
+    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+}
+
+.icon {
+    display: flex; /* Flexbox voor het logo */
+    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+}
+
+.icon img {
+    max-height: 30px; /* Maximale hoogte van het logo is 60px */
+    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+}
+
+.icon img:hover {
+    cursor: pointer; /* Verander de cursor in een handje bij hover */
+}
+
+/* Navigatielinks in het midden */
+.nav-center {
+    list-style: none; /* Verwijder bullet points van de lijst */
+    display: flex; /* Zet de links naast elkaar */
+    gap: 20px; /* Ruimte van 20px tussen de links */
+}
+
+.nav-center li a {
+    text-decoration: none; /* Verwijder de onderstreping van de links */
+    color: #1C3D77; /* Donkerblauwe kleur voor de tekst */
+    font-weight: bold; /* Vette tekst */
+}
+
+.nav-center li a:hover {
+    text-decoration: underline; /* Onderstreep de link bij hover */
+}
+
+/* Rechterkant met iconen en de contactknop */
+.nav-right {
+    display: flex; /* Flexbox voor de iconen en contactknop */
+    align-items: center; /* Verticaal centreren van de iconen */
+    gap: 20px; /* Ruimte van 20px tussen de iconen en de knop */
+}
+
+/* Styling van de contactknop */
+.contact-button {
+    border: 2px solid #1C3D77; /* Donkerblauwe rand */
+    padding: 8px 16px; /* Padding rondom de knop */
+    border-radius: 5px; /* Ronde hoeken van 5px */
+    background-color: white; /* Witte achtergrond */
+    color: #1C3D77; /* Donkerblauwe tekstkleur */
+    text-decoration: none; /* Verwijder de onderstreping van de link */
+    font-weight: bold; /* Vette tekst */
+}
+
+.contact-button:hover {
+    background-color: #1C3D77; /* Donkerblauwe achtergrond bij hover */
+    color: white; /* Witte tekstkleur bij hover */
+}
 
 body {
     font-family: Arial, sans-serif;
