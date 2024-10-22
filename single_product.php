@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/catalogue.css"> 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css"> 
     <title>Product Details</title>
 </head>
 <body>
@@ -134,8 +134,11 @@
             // Toon kleur- en maatopties
             echo '<div class="product-options">';
             echo '<div class="size-options"><label>Size:</label>';
+
             foreach ($product["sizes"] as $size) {
-                echo '<button>' . $size . '</button>';
+                // Voeg de 'active' class toe aan de knop voor maat 'M' bijvoorbeeld
+                $activeClass = ($size === 'M') ? ' active' : '';
+                echo '<button class="size-button' . $activeClass . '">' . $size . '</button>';
             }
             echo '</div>';
             echo '<div class="color-options"><label>Color:</label>';
@@ -239,8 +242,10 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-</script>
-
+    </script>
 
 </body>
+
+<?php include 'nav/footer.php'; ?>
+
 </html>

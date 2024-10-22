@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/catalogue.css"> 
+    <link rel="stylesheet" href="css/footer.css"> 
     <title>Catalogue</title>
 </head>
 <body>
@@ -13,7 +14,8 @@
     <div class="title-container">
         <h1 class="page-title">CATALOGUE</h1>
     </div>
-    <div class="filter-bar">
+
+    <div class="filter-bar"> 
         <form method="GET" action="catalogue.php">
             <input type="search" name="search" placeholder="Search" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
             <button type="submit" class="filter-button">Search</button>
@@ -102,4 +104,7 @@
 
     </div>
 </body>
+
+<?php include 'nav/footer.php'; ?>
+
 </html>

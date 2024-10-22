@@ -1,14 +1,3 @@
-<!-- navbar.php -->
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Navbar</title>
-</head>
-<body>
-
 <div class="top-bar">
     Worldwide Shipping • Fast Delivery • Bulk Purchase • 24/7 Customer Support
 </div>
@@ -25,7 +14,7 @@
     </ul>
     <div class="nav-right">
         <a href="contact.php" class="contact-button">Contact</a>
-        <a href="#" class="icon"><img src="img/nav/user.svg" alt="User"></a> 
+        <a href="login.php" class="icon"><img src="img/nav/user.svg" alt="User"></a> 
         <a href="cart.php" class="icon">
             <img src="img/nav/cart.svg" alt="Cart">
             <div id="cart-counter" class="cart-counter"></div> 
@@ -43,6 +32,3 @@
 
     document.addEventListener('DOMContentLoaded', updateCartCounter);
 </script>
-
-</body>
-</html>
