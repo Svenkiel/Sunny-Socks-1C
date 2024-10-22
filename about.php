@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="css/about.css">
     <title>About</title>
 </head>
-
 <body>
 
         <?php include 'nav/navbar.php'; ?>
-
-        <div class="aboutus-title">
-        <h1 class>ABOUT US</h1>
-        
-        </div>
+            <div class="title-wrapper">
+                <div class="aboutus-container">
+                <h1 class="aboutus-title">ABOUT US</h1>
+                </div>
+            </div>
 
             <div class="intro-container">
                     <div class="intro-text">
@@ -27,7 +26,6 @@
                     </div>
             </div>
 
-
     <div class="grid-container">
                 <div class="grid-item">
                     <h2>International Reach, Local Care</h2>
@@ -38,12 +36,16 @@
                     <h2>Efficient Global Logistics</h2>
                     <p>Our state-of-the-art distribution center ensures that your orders are processed quickly and delivered globally. Sunny Socks is committed to providing seamless logistics solutions, with every box carefully prepared and shipped to your location, whether you’re based in Europe, Asia, or beyond.</p>
                 </div>
+
+                <hr>
+
                 <div class="grid-item">
                         <h2>Socks Built for Performance</h2>
                         <p>Sunny Socks offers a wide range of sturdy, professional-grade socks designed for tough environments. From the freezing conditions on oil rigs to the rugged demands of construction sites, our socks are crafted to support the daily work of employees across various industries. Our collections are specifically tailored for organizations that prioritize comfort, durability, and quality in their footwear.</p>
                     </div>
                     
                     <img src="img/sunny_socks_stock photo.png" class="img" alt="sock">
+                <hr>
 
                     <img src="img/mil_socks.png" class="img" alt="military socks">
         
@@ -51,7 +53,8 @@
                     <h2>Military-Grade Warmth and Comfort</h2>
                     <p>Our military edition socks are designed to meet the exacting standards of soldiers, air force personnel, and navy workers. Created with reinforced material for extra durability and warmth, these socks ensure that your personnel’s feet stay protected in the harshest environments. The minimal design, in camouflage and tactical colors, keeps things simple yet functional.</p>
                 </div>
-
+                
+                <hr>
 
                 <div class="grid-item">
                     <h2>Sustainable and Practical Packaging</h2>

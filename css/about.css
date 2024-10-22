@@ -26,7 +26,8 @@ body {
     font-family: 'Nexa', sans-serif; /* Nexa lettertype */
     color: #1C3D77;
     background: no-repeat 50% 20% url("../img/distributie_centra\ sunny_socks.png");
-    background-size: 100%;
+    background-size: contain;
+    
 }
 
 /* Topbar Styling */
@@ -115,18 +116,26 @@ body {
     color: white; /* Witte tekstkleur bij hover */
 }
 
-hr {
-
-    border-style: solid;
-    border-color: #FECD3E;
-    margin: auto;
-    width: 75%;
+.title-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
+.aboutus-container {
+    text-align: left;
+    padding-top: 100px;
+    margin-right: 200px;
+    
+}
 .aboutus-title {
     font-weight: bold;
-    font-size: 22px;
-    text-decoration: overline 5px solid #1d3d70;
+    border-top: 5px solid #1d3d70;
+    padding-top: 10px;
+    display: inline-block;
 }
 
 .intro-container {
@@ -144,15 +153,24 @@ hr {
     gap: 20px;
     margin: 0 auto;
     width: 80%;
-    margin-top: 110vh;
+    margin-top: 130vh;
+    width: 75%;
+
+}
+
+.grid-container > hr {
+    grid-column: 1 / -1;
+    border-style: solid;
+    border-color: #FECD3E;
+    margin: auto;
+    width: 75%;
+    margin-top: 100px;
 }
 
 .grid-container > img {
     border-radius: 10px;
     margin-top: 100px;
     outline: 4px solid #1C3D77;
-    width: 500px;
-    height: 500px;
 }
 
 .grid-item > h2 {
@@ -163,5 +181,5 @@ hr {
 
 .grid-item > p {
     text-align:center;
-    width: 90%;
+
 }
