@@ -28,5 +28,14 @@
   
                 <label for="city">City</label>
                 <input type="text" id="city" name="city" required>
+
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" required>
+                    
+                <label for="phone">Contact Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+ 
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
 </body>
 </html>
