@@ -154,13 +154,76 @@ main {
 }
 
 .form-group input {
-    width: 200%; /* Maakt het invoerveld net zo breed als de container */
+    width: 170%; /* Maakt het invoerveld net zo breed als de container */
     padding: 5px; /* Voeg wat padding toe voor ruimte in het veld */
     border: 1px solid #ccc; /* Rand rond het invoerveld */
     border-radius: 5px; /* Afronde hoeken */
     font-size: 1em; /* Zorgt voor goede leesbaarheid */
 }
 
+.file-upload {
+    position: relative;
+    border: 2px dashed #a8b3d1;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    color: #a8b3d1;
+    margin-bottom: 15px;
+}
 
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
 
+.upload-label input[type="file"] {
+    display: none; /* Verberg het standaard uploadveld */
+}
+
+.upload-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3a4a7a;
+    font-size: 1rem;
+}
+
+.file-info {
+    font-size: 0.9rem;
+    color: #a8b3d1;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #14326e;
+    color: #efb327;
+    font-size: 1rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 200%; /* Laat de knop de volledige breedte innemen */
+}
+
+.submit-btn:hover {
+    background-color: #002366;
+}
+
+/* Voor de checkbox-styling */
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #3a4a7a;
+}
 
