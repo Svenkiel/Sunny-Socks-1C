@@ -17,32 +17,50 @@
         </div>
 
         <div class="SES-container">
-            <h3>Get in Touch</h3>
-
-            <p class="page-p"> 
+        <h3>Get in <span class="highlight">Touch</span></h3>
+            <p class="page-p">
                 Have questions or need assistance? Get in touch with our team-we are
                 here to help with fast, fiendly support!
             </p>
-        </div>
-
-        <div class="HE-container">
-            <h3>Contact name</h3>
-            
-        </div>
-
-       
+        </div:>
+        
+        <div class="form-group">
+    <div><h3 for="contact-name">Contact Name</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
         
+        <div class="form-group">
+    <div><h3 for="contact-name">Street</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+
+        <div class="form-group">
+    <div><h3 for="contact-name">City</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+
+<div class="form-group">
+    <div><h3 for="contact-name">Zip</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+
+<div class="form-group">
+    <div><h3 for="contact-name">Contact phone</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+
+<div class="form-group">
+    <div><h3 for="contact-name">E-mail</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+
+<div class="form-group">
+    <div><h3 for="contact-name">Message</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+
         
-        
-        
-            
-            
-
-            
-
-
-
     </main>
 
     <?php include 'nav/footer.php'; ?>

@@ -116,9 +116,9 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0px;
-    padding: 20px;
+    padding: 50px;
     width: 80%;
     margin: 0 auto;
 }
@@ -134,31 +134,33 @@ main {
     font-weight: bold;
     color: #1d3d70;
     border-top: 5px solid #1d3d70;
-    padding-top: 10px;
+    padding-top: 30px;
     display: inline-block;
 
-
 }
-
 .SES-container{
     grid-area: 2/1/2/2;
     text-align: left;
     padding-top: 50px;
 }
-
-.AIE-container{
-    grid-area: 2/2/3/2;
-    text-align: under;
-    padding-top: 50px;
-    
-}.HE-container{
-    grid-area: 4/1/4/2;
-    text-align: left;
-    padding-top: 50px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.EC-container{
-    grid-area: 5/2/6/3;
-    text-align: left;
-    padding-top: 50px;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
+
+.form-group input {
+    width: 200%; /* Maakt het invoerveld net zo breed als de container */
+    padding: 5px; /* Voeg wat padding toe voor ruimte in het veld */
+    border: 1px solid #ccc; /* Rand rond het invoerveld */
+    border-radius: 5px; /* Afronde hoeken */
+    font-size: 1em; /* Zorgt voor goede leesbaarheid */
+}
+
+
+
+
