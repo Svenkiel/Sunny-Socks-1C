@@ -154,7 +154,7 @@ body {
     gap: 15px;
 }
 
-#vnaam, #anaam {
+#first-name, #last-name {
     max-width: 100%;
 }
 

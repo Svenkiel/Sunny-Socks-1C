@@ -23,23 +23,23 @@
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="vnaam">First Name</label>
-                        <input type="text" name="voornaam" id="vnaam"/>
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name"/>
                     </div>
                     <div class="form-group">
-                        <label for="anaam">Last Name</label>
-                        <input type="text" name="achternaam" id="anaam"/>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="bnaam">Company Name</label>
-                    <input type="text" name="bedrijfsnaam" id="bnaam"/>
+                    <label for="company-name">Company Name</label>
+                    <input type="text" name="company-name" id="company-name"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="land">Country / Region</label>
-                    <select name="landRegio" id="land">
+                    <label for="country">Country / Region</label>
+                    <select name="country" id="country">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -288,21 +288,21 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="adres">Street Address</label>
-                    <input type="text" name="adres" id="adres"/>
+                    <label for="address">Street Address</label>
+                    <input type="text" name="address" id="address"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="stad">Town / City</label>
-                    <input type="text" name="stad" id="stad"/>
+                    <label for="town">Town / City</label>
+                    <input type="text" name="town" id="town"/>
                 </div>
                 
                 <div class="form-group">
-                    <label for="provincie">Province</label>
-                    <select name="provincie" id="provincie">
-                        <option value="noord">Nothern Province</option>
-                        <option value="oost">Eastern Province</option>
-                        <option value="zuid">Southern Province</option>
+                    <label for="province">Province</label>
+                    <select name="province" id="province">
+                        <option value="north">Nothern Province</option>
+                        <option value="east">Eastern Province</option>
+                        <option value="south">Southern Province</option>
                         <option value="west" selected>Western Province</option>
                     </select>
                 </div>
@@ -313,17 +313,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="telNummer">Phone</label>
-                    <input type="text" name="telefoonNummer" id="telNummer"/>
+                    <label for="phone-number">Phone</label>
+                    <input type="text" name="phone-number" id="phone-number"/>
                 </div>
 
                 <div class="form-group extra-margin">
-                    <label for="mail">Email Address</label>
-                    <input type="text" name="email" id="mail"/>
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email"/>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="overig" id="overig" placeholder="Additional information"/>
+                    <input type="text" name="additional" id="additional" placeholder="Additional information"/>
                 </div>
             </form>
         </div>
