@@ -1,10 +1,14 @@
+<?php 
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/about.css">
-    <title>About</title>
+    <title>About Us</title>
 </head>
 <body>
 
@@ -65,5 +69,11 @@
                 <img src="img/sunny_socks_packages.png" class="img" alt="packaging">
     </div>
 
+
+    <div class="flex-chat">
+                <img src="img/Chat.png" alt="contact">
+    </div>
+
+    <?php include 'nav/footer.php'; ?>
 </body>
 </html>

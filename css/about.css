@@ -133,6 +133,143 @@ body {
 }
 
 
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    color: #1E407A;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    color: #1E407A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nexa', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1E407A;
+}
+
+.border-top {
+    border-top: yellow;
+    border-top-width: 5px;
+}
+
+footer {
+    background-color: #F9F9F9;
+    padding: 40px 20px;
+    color: #00266B;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; 
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    margin-right: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #00266B;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.language-selector img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+form input[type="email"] {
+    padding: 5px;
+    border: 1px solid #00266B;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #00266B;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form button:hover {
+    background-color: #0047CC;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.footer-bottom a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #00266B;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline; 
+}
+
 .title-wrapper {
     display: grid;
     gap: 20px;
@@ -207,6 +344,18 @@ body {
 
 .grid-item > p {
     text-align:center;
+    max-width: 50%; /* Limit the width to make the text narrow */
+    margin: 0 auto; /* Center the text block */
+    text-align: center; 
 
 }
 
+.flex-chat {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding-right: 200px;
+}
+
+
+    
