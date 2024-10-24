@@ -347,7 +347,12 @@ form button:hover {
 .flex-chat {
     display: flex;
     justify-content: flex-end;
-    flex-wrap: nowrap;
-    padding-right: 200px;
+}
+
+.flex-chat > img {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
 
