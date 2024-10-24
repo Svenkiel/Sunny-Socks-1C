@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/catalogue.css"> 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css"> 
     <title>Product Details</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
             1 => [
                 "name" => "Uniform colour socks", 
                 "description" => "Available in multiple colours, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€18.99", 
                 "image" => "img/Sunny_socks_uni_blue.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -32,7 +32,7 @@
             2 => [
                 "name" => "Classic strip socks", 
                 "description" => "Available in multiple colours, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€18.99", 
                 "image" => "img/Sunny_socks_blue.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -46,7 +46,7 @@
             3 => [
                 "name" => "Military grade socks", 
                 "description" => "Available in black only, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€22.50", 
                 "image" => "img/military_socks.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -56,7 +56,7 @@
             4 => [
                 "name" => "Construction socks", 
                 "description" => "Available in black only, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€19.99", 
                 "image" => "img/construction_socks.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -66,7 +66,7 @@
             5 => [
                 "name" => "Oil & Gas socks", 
                 "description" => "Available in black only, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€19.99", 
                 "image" => "img/oil_gas_socks.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -134,8 +134,11 @@
             // Toon kleur- en maatopties
             echo '<div class="product-options">';
             echo '<div class="size-options"><label>Size:</label>';
+
             foreach ($product["sizes"] as $size) {
-                echo '<button>' . $size . '</button>';
+                // Voeg de 'active' class toe aan de knop voor maat 'M' bijvoorbeeld
+                $activeClass = ($size === 'M') ? ' active' : '';
+                echo '<button class="size-button' . $activeClass . '">' . $size . '</button>';
             }
             echo '</div>';
             echo '<div class="color-options"><label>Color:</label>';
@@ -239,8 +242,10 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-</script>
-
+    </script>
 
 </body>
+
+<?php include 'nav/footer.php'; ?>
+
 </html>

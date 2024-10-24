@@ -114,111 +114,116 @@ body {
     color: white; /* Witte tekstkleur bij hover */
 }
 
-.cart-counter {
-    position: absolute;
-    top: 55px;
-    right: 10px;
-    background-color: red; 
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    display: none; 
-}
-
-.cart-counter.active {
-    display: inline; 
-}
-
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    margin: 5rem 0 15rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto;
 }
 
-h1 {
-    color: #1C3D77;
-    margin: 100px auto;
+/* Title Styling */
+.contact-container {
+    text-align: left;
+    padding-top: 100px;
 }
 
-.title {
-    color: #1C3D77;
-    border-top: 5px solid #1C3D77;
-    display: inline;
+/* Pagina titel */
+.contact-title {
+    font-weight: bold;
+    color: #1d3d70;
+    border-top: 5px solid #1d3d70;
+    padding-top: 30px;
+    display: inline-block;
+
+}
+.SES-container{
+    grid-area: 2/1/2/2;
+    text-align: left;
+    padding-top: 50px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 170%; /* Maakt het invoerveld net zo breed als de container */
+    padding: 5px; /* Voeg wat padding toe voor ruimte in het veld */
+    border: 1px solid #ccc; /* Rand rond het invoerveld */
+    border-radius: 5px; /* Afronde hoeken */
+    font-size: 1em; /* Zorgt voor goede leesbaarheid */
+}
+
+.file-upload {
+    position: relative;
+    border: 2px dashed #a8b3d1;
+    border-radius: 8px;
+    padding: 30px;
     text-align: center;
-    margin-left: 3rem;
+    color: #a8b3d1;
+    margin-bottom: 15px;
 }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-}
-
-.form-field {
-    grid-column: 2/4;
-    margin-top: 7rem;
-}
-
-label, a {
-    color: #1C3D77;
-}
-
-.input-field, label {
-    max-width: 400px;
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.submit-field > input {
-    border: none;
-    outline: none;
-    padding: 5px 30px;
-    font-size: 24px;
-    background-color: #1C3D77;
-    border-radius: 4px;
-    color: #FECD3E;
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
 }
 
-.login-form > input{
+.upload-label input[type="file"] {
+    display: none; /* Verberg het standaard uploadveld */
+}
+
+.upload-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3a4a7a;
+    font-size: 1rem;
+}
+
+.file-info {
+    font-size: 0.9rem;
+    color: #a8b3d1;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #14326e;
+    color: #efb327;
+    font-size: 1rem;
+    padding: 15px 30px;
     border: none;
-    outline: none;
-    border-bottom: 1px #FECD3E solid;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 200%; /* Laat de knop de volledige breedte innemen */
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
+.submit-btn:hover {
+    background-color: #002366;
 }
 
-.home-btn {
-    background-color: #1C3D77;
-    padding: 12px 40px;
-    color: #FECD3E;
-    font-weight: bold;
-    border-radius: 4px;
-    margin: 0 auto;
-    text-decoration: none;
+/* Voor de checkbox-styling */
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
 }
 
-.home-btn:hover {
-    background-color: #152f5d; 
+.form-group label {
+    font-size: 1rem;
+    color: #3a4a7a;
 }
-
-.login-success {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.error-message {
-    color: red;
-}
-
-
-
-
-
-
-
 

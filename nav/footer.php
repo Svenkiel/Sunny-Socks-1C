@@ -7,14 +7,11 @@
     <title>Footer</title>
 </head>
 <body>
-
-<div class="border-top">
-
-<footer>
+    <footer>
         <div class="footer-container">
-            
-            <div class="footer-section">
-                <h2>Sunny.</h2>
+                
+            <div class="logo">
+                <img src="img/footer/sunny_logos_blue.png" alt="Logo">
             </div>
 
             <div class="footer-links">
@@ -22,28 +19,28 @@
                 <div class="footer-column">
                     <h3>LINKS</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="catalogue.php">Shop</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3>SHOP</h3>
                     <ul>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Releases</a></li>
+                        <li><a href="catalogue.php">Products</a></li>
+                        <li><a href="cart.php">Overview</a></li>
+                        <li><a href="catalogue.php">Pricing</a></li>
+                        <li><a href="catalogue.php">Releases</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3>CONTACT US</h3>
                     <ul>
-                        <li><a href="#">Telephone</a></li>
-                        <li><a href="#">Email</a></li>
+                        <li><a href="contact.php">Telephone</a></li>
+                        <li><a href="contact.php">Email</a></li>
                     </ul>
                 </div>
 
@@ -77,7 +74,6 @@
             <a href="#">Cookies</a>
         </div>
     </footer>
-</div>
 </body>
 </html>
         
