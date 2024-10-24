@@ -69,17 +69,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="first-name"/>
+                        <input type="text" name="first-name" id="first-name">
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
-                        <input type="text" name="last-name" id="last-name"/>
+                        <input type="text" name="last-name" id="last-name">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="company-name">Company Name</label>
-                    <input type="text" name="company-name" id="company-name"/>
+                    <input type="text" name="company-name" id="company-name">
                 </div>
 
                 <div class="form-group">
@@ -334,12 +334,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="form-group">
                     <label for="address">Street Address</label>
-                    <input type="text" name="address" id="address"/>
+                    <input type="text" name="address" id="address">
                 </div>
 
                 <div class="form-group">
                     <label for="town">Town / City</label>
-                    <input type="text" name="town" id="town"/>
+                    <input type="text" name="town" id="town">
                 </div>
                 
                 <div class="form-group">
@@ -354,21 +354,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 <div class="form-group">
                     <label for="zip-code">ZIP Code</label>
-                    <input type="text" name="zip-code" id="zip-code" placeholder="1234 AB"/>
+                    <input type="text" name="zip-code" id="zip-code" placeholder="1234 AB">
                 </div>
 
                 <div class="form-group">
                     <label for="phone-number">Phone</label>
-                    <input type="text" name="phone-number" id="phone-number" placeholder="+1234567890"/>
+                    <input type="text" name="phone-number" id="phone-number" placeholder="+1234567890">
                 </div>
 
                 <div class="form-group extra-margin">
                     <label for="email">Email Address</label>
-                    <input type="text" name="email" id="email"/>
+                    <input type="text" name="email" id="email">
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="additional" id="additional" placeholder="Additional information"/>
+                    <input type="text" name="additional" id="additional" placeholder="Additional information">
                 </div>
 
                 <button type="submit" id="submit-button">Submit</button>
