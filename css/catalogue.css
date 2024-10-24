@@ -371,8 +371,18 @@ body {
 
 .size-options button:hover, .color-options button:hover {
     background-color: #f0f0f0;
+    color: #333;
 }
 
+.size-button.active {
+    background-color: #0056b3; 
+    color: white;
+    border: 1px solid #0056b3;
+}
+
+.size-button.active:hover {
+    color: #333;
+}
 /* Color buttons */
 .color-options button {
     width: 30px;
