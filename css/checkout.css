@@ -176,6 +176,10 @@ body {
     background-color: white;
 }
 
+button {
+    display: none;
+}
+
 .summary {
     display: flex;
     flex-direction: column;
@@ -241,6 +245,13 @@ hr {
     border-radius: 15px;
     color: #1d3d70;
     padding: 18px 20%;
-    margin-bottom: 4rem;
+    font-size: 20px;
+}
+
+.validation-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5rem;
     font-size: 20px;
 }

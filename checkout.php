@@ -1,3 +1,43 @@
+<?php
+$validationMessage = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstName = $_POST['first-name'] ?? '';
+    $lastName = $_POST['last-name'] ?? '';
+    $companyName = $_POST['company-name'] ?? '';
+    $address = $_POST['address'] ?? '';
+    $town = $_POST['town'] ?? '';
+    $zipCode = $_POST['zip-code'] ?? '';
+    $phoneNumber = $_POST['phone-number'] ?? '';
+    $email = $_POST['email'] ?? '';
+
+    $inputs = [
+        $firstName,
+        $lastName,
+        $companyName,
+        $address,
+        $town,
+        $zipCode,
+        $phoneNumber,
+        $email
+    ];
+
+    $filledInputs = array_filter($inputs);
+
+    if (count($filledInputs) === count($inputs) && 
+        filter_var($email, FILTER_VALIDATE_EMAIL) && 
+        preg_match('/^\+?[0-9]{10,15}$/', $phoneNumber) &&
+        preg_match('/^\d{4}\s?[A-Za-z]{2}$/', $zipCode)) {
+
+        header("Location: index.php"); 
+        exit();
+
+    } else {
+        $validationMessage = '<p>Please make sure to fill in the required fields as intended</p>';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -308,8 +348,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="postcode">ZIP Code</label>
-                    <input type="text" name="postcode" id="postcode"/>
+                    <label for="zip-code">ZIP Code</label>
+                    <input type="text" name="zip-code" id="zip-code"/>
                 </div>
 
                 <div class="form-group">
@@ -325,6 +365,8 @@
                 <div class="form-group">
                     <input type="text" name="additional" id="additional" placeholder="Additional information"/>
                 </div>
+
+                <button type="submit" id="submit-button">Submit</button>
             </form>
         </div>
 
@@ -384,23 +426,14 @@
                 to your account, and for other purposes described in our privacy policy.
             </p>
 
-            <a class="place-order-button" onclick="order()"><b>Place order</b></a>
+            <a class="place-order-button" onclick="document.getElementById('submit-button').click();">
+                <b>Place order</b>
+            </a>
+            
+            <div class="validation-message">
+                <?php echo $validationMessage; ?>
+            </div>
         </div>
     </div>
-    <script>
-        function order(){
-            alert("Order placed successfully");
-
-            const form = document.querySelector('form');
-            form.reset();
-
-            const radioButtons = document.querySelectorAll('input[type="radio"]');
-            radioButtons.forEach(radioButton => {
-            radioButton.checked = false;
-            });
-            
-            window.location.href = "index.php";
-        }
-    </script>
 </body>
 </html>
