@@ -1,5 +1,8 @@
 <?php
+// Start off with an empty validation message
 $validationMessage = '';
+
+// Retrieve relevant form data by storing given answers into variables
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = $_POST['first-name'] ?? '';
     $lastName = $_POST['last-name'] ?? '';
@@ -12,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phoneNumber = $_POST['phone-number'] ?? '';
     $email = $_POST['email'] ?? '';
 
+    // Create an array of the inputs that need to be checked
     $inputs = [
         $firstName,
         $lastName,
@@ -25,18 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email
     ];
 
-    $filledInputs = array_filter($inputs);
+    // Create an array of the above inputs that were filled in
+    $filledInputs = array_filter($inputs); // Removes empty inputs
 
-    if (count($filledInputs) === count($inputs) && 
-        filter_var($email, FILTER_VALIDATE_EMAIL) && 
-        preg_match('/^\+?[0-9]{10,15}$/', $phoneNumber) &&
-        preg_match('/^\d{4}\s?[A-Za-z]{2}$/', $zipCode)) {
-
-        header("Location: index.php"); 
+    // Check if all inputs were filled in and validate provided email, phone number and postcode
+    if (count($filledInputs) === count($inputs) && filter_var($email, FILTER_VALIDATE_EMAIL) && 
+        preg_match('/^\+?[0-9]{10,15}$/', $phoneNumber) && preg_match('/^\d{4}\s?[A-Za-z]{2}$/', $zipCode)) {
+        
+        header("Location: index.php"); // Redirects to home page
         exit();
 
     } else {
-        $validationMessage = '<p>Please make sure to fill in the required fields as intended</p>';
+        $validationMessage = '<p>Please make sure to fill in the required fields as intended</p>'; // Sets error message
     }
 }
 ?>
@@ -371,6 +375,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" name="additional" id="additional" placeholder="Additional information">
                 </div>
 
+                <!-- Hidden submit button -->
                 <button type="submit" id="submit-button">Submit</button>
             </form>
         </div>
@@ -379,7 +384,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <table>
                 <tr>
                     <td><h3>Product</h3></td>
-                    <td>&nbsp;</td>
+                    <td></td>
                     <td><h3>Subtotal</h3></td>
                 </tr>
                 <tr>
@@ -399,12 +404,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </tr>
                 <tr>
                     <td>Subtotal</td>
-                    <td>&nbsp;</td>
+                    <td></td>
                     <td>€2775.00</td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>&nbsp;</td>
+                    <td></td>
                     <td><h3 class="total-price">€2775.00</h3></td>
                 </tr>
             </table>
@@ -431,10 +436,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 to your account, and for other purposes described in our privacy policy.
             </p>
 
+            <!-- Element that triggers the hidden submit button -->
             <a class="place-order-button" onclick="document.getElementById('submit-button').click();">
                 <b>Place order</b>
             </a>
             
+            <!-- Validation message appears if contextually appropriate -->
             <div class="validation-message">
                 <?php echo $validationMessage; ?>
             </div>

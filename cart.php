@@ -97,19 +97,28 @@
         </div>
     </div>
     <script>
+        // Product removal from cart table
         function removeProduct(element) {
             alert("Product removed from cart");
             const row = element.closest('tr');
             row.remove();
 
+            // Update total price
             calcTotal();
         }
         
+        // Calculate subtotal after change in quantity
         function calcSubtotal(input) {
+            
+            // Fetch product price
             const row = input.closest('tr');
             const priceCell = row.cells[2];
             const price = parseFloat(priceCell.textContent.replace('€', ''));
+
+            // Fetch product quantity
             const quantity = parseInt(input.value);
+
+            // Calculate subtotal and update totals
             const subtotal = price * quantity;
             const subtotalCell = row.querySelector('.subtotal');
             subtotalCell.textContent = `€${subtotal.toFixed(2)}`;
@@ -117,6 +126,7 @@
             calcTotal();
         }
 
+        // Calculate total price using subtotals
         function calcTotal() {
             const subtotals = document.querySelectorAll('.subtotal');
             let total = 0;
@@ -126,6 +136,7 @@
                 total += parseFloat(subtotalText);
             });
 
+            // Update display of total price
             const totalCells = document.querySelectorAll('.total');
             totalCells.forEach(totalCell => {
             totalCell.textContent = `€${total.toFixed(2)}`;
