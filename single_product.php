@@ -18,7 +18,7 @@
             1 => [
                 "name" => "Uniform colour socks", 
                 "description" => "Available in multiple colours, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€18.99", 
                 "image" => "img/Sunny_socks_uni_blue.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -32,7 +32,7 @@
             2 => [
                 "name" => "Classic strip socks", 
                 "description" => "Available in multiple colours, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€18.99", 
                 "image" => "img/Sunny_socks_blue.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -46,7 +46,7 @@
             3 => [
                 "name" => "Military grade socks", 
                 "description" => "Available in black only, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€22.50", 
                 "image" => "img/military_socks.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -56,7 +56,7 @@
             4 => [
                 "name" => "Construction socks", 
                 "description" => "Available in black only, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€19.99", 
                 "image" => "img/construction_socks.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [
@@ -66,7 +66,7 @@
             5 => [
                 "name" => "Oil & Gas socks", 
                 "description" => "Available in black only, made from high quality organic cotton", 
-                "price" => "€10", 
+                "price" => "€19.99", 
                 "image" => "img/oil_gas_socks.jpg", 
                 "sizes" => ["S", "M", "L"], 
                 "colors" => [

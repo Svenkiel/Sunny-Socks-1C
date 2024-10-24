@@ -1,3 +1,43 @@
+<?php
+$validationMessage = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstName = $_POST['first-name'] ?? '';
+    $lastName = $_POST['last-name'] ?? '';
+    $companyName = $_POST['company-name'] ?? '';
+    $address = $_POST['address'] ?? '';
+    $town = $_POST['town'] ?? '';
+    $zipCode = $_POST['zip-code'] ?? '';
+    $phoneNumber = $_POST['phone-number'] ?? '';
+    $email = $_POST['email'] ?? '';
+
+    $inputs = [
+        $firstName,
+        $lastName,
+        $companyName,
+        $address,
+        $town,
+        $zipCode,
+        $phoneNumber,
+        $email
+    ];
+
+    $filledInputs = array_filter($inputs);
+
+    if (count($filledInputs) === count($inputs) && 
+        filter_var($email, FILTER_VALIDATE_EMAIL) && 
+        preg_match('/^\+?[0-9]{10,15}$/', $phoneNumber) &&
+        preg_match('/^\d{4}\s?[A-Za-z]{2}$/', $zipCode)) {
+
+        header("Location: index.php"); 
+        exit();
+
+    } else {
+        $validationMessage = '<p>Please make sure to fill in the required fields as intended</p>';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -23,23 +63,23 @@
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="vnaam">First Name</label>
-                        <input type="text" name="voornaam" id="vnaam"/>
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name"/>
                     </div>
                     <div class="form-group">
-                        <label for="anaam">Last Name</label>
-                        <input type="text" name="achternaam" id="anaam"/>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="bnaam">Company Name</label>
-                    <input type="text" name="bedrijfsnaam" id="bnaam"/>
+                    <label for="company-name">Company Name</label>
+                    <input type="text" name="company-name" id="company-name"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="land">Country / Region</label>
-                    <select name="landRegio" id="land">
+                    <label for="country">Country / Region</label>
+                    <select name="country" id="country">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -288,43 +328,45 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="adres">Street Address</label>
-                    <input type="text" name="adres" id="adres"/>
+                    <label for="address">Street Address</label>
+                    <input type="text" name="address" id="address"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="stad">Town / City</label>
-                    <input type="text" name="stad" id="stad"/>
+                    <label for="town">Town / City</label>
+                    <input type="text" name="town" id="town"/>
                 </div>
                 
                 <div class="form-group">
-                    <label for="provincie">Province</label>
-                    <select name="provincie" id="provincie">
-                        <option value="noord">Nothern Province</option>
-                        <option value="oost">Eastern Province</option>
-                        <option value="zuid">Southern Province</option>
+                    <label for="province">Province</label>
+                    <select name="province" id="province">
+                        <option value="north">Nothern Province</option>
+                        <option value="east">Eastern Province</option>
+                        <option value="south">Southern Province</option>
                         <option value="west" selected>Western Province</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="postcode">ZIP Code</label>
-                    <input type="text" name="postcode" id="postcode"/>
+                    <label for="zip-code">ZIP Code</label>
+                    <input type="text" name="zip-code" id="zip-code"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="telNummer">Phone</label>
-                    <input type="text" name="telefoonNummer" id="telNummer"/>
+                    <label for="phone-number">Phone</label>
+                    <input type="text" name="phone-number" id="phone-number"/>
                 </div>
 
                 <div class="form-group extra-margin">
-                    <label for="mail">Email Address</label>
-                    <input type="text" name="email" id="mail"/>
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email"/>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="overig" id="overig" placeholder="Additional information"/>
+                    <input type="text" name="additional" id="additional" placeholder="Additional information"/>
                 </div>
+
+                <button type="submit" id="submit-button">Submit</button>
             </form>
         </div>
 
@@ -384,23 +426,14 @@
                 to your account, and for other purposes described in our privacy policy.
             </p>
 
-            <a class="place-order-button" onclick="order()"><b>Place order</b></a>
+            <a class="place-order-button" onclick="document.getElementById('submit-button').click();">
+                <b>Place order</b>
+            </a>
+            
+            <div class="validation-message">
+                <?php echo $validationMessage; ?>
+            </div>
         </div>
     </div>
-    <script>
-        function order(){
-            alert("Order placed successfully");
-
-            const form = document.querySelector('form');
-            form.reset();
-
-            const radioButtons = document.querySelectorAll('input[type="radio"]');
-            radioButtons.forEach(radioButton => {
-            radioButton.checked = false;
-            });
-            
-            window.location.href = "index.php";
-        }
-    </script>
 </body>
 </html>

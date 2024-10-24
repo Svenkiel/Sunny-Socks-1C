@@ -114,15 +114,32 @@ body {
     color: white; /* Witte tekstkleur bij hover */
 }
 
+.cart-counter {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: red; 
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none; 
+}
+
+.cart-counter.active {
+    display: inline; 
+}
+
 main {
     margin: 1em;
     padding: 6em 10em;
 }
+
 .home-top{
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 50%;
+    width: 60%;
 }
 
 .home-top > p {
@@ -139,7 +156,7 @@ main {
 }
 
 .sunny-logo {
-    width: 590px;
+    width: 650px;
 }
 
 .catalogue-button {
@@ -149,6 +166,10 @@ main {
     color: #FECD3E;
     width: fit-content;
     padding: 18px 40px;
+}
+
+.catalogue-button:hover {
+    background-color: #152f5d; 
 }
 
 .home-middle {
@@ -175,6 +196,10 @@ main {
     color: white;
     right: 200px;
     transform: rotate(140deg);
+}
+
+.points-btn:hover {
+    background-color: #ffbf00;
 }
 
 .home-title {
@@ -246,7 +271,7 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1000;
+    z-index: 1;
     border-radius: 50%;
     color: white;
 }
@@ -266,14 +291,13 @@ main {
 .popup {
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 2; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
     background-color: rgba(0, 0, 0, 0.5); 
   }
-  
   
   .popup-content {
     background-color: #1C3D77;
@@ -302,25 +326,30 @@ main {
   .popup-content > form {
     display: flex;
     flex-direction: column;
+    width: 80%;
     max-width: 400px;
     margin: 0 auto;
   }
 
   .form-input {
-    height: 25px;
     font-size: 20px;
     color: #1C3D77;
     outline: none;
+    border: none;
+    border-radius: 4px;
+    min-width: 350px;
+    padding: 4px;
   }
 
   .submit {
-    height: 40px;
+    padding: 6px 0;
     background-color: #FECD3E;
     color: #1C3D77;
     border-radius: 10px;
     border-style: none;
     font-size: 30px;
     font-weight: bold;
+    min-width: 350px;
   }
 
   .popup-content > h1, p, input {
@@ -339,3 +368,5 @@ main {
     text-decoration: none;
     cursor: pointer;
   }
+
+  

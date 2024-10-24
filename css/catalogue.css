@@ -305,6 +305,7 @@ body {
     font-size: 12px;
     display: none; 
 }
+
 .cart-counter.active {
     display: inline; 
 }

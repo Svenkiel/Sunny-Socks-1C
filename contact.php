@@ -1,84 +1,141 @@
 <!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contact.css">
-</head>
-<body>
-
-    <?php include 'nav/navbar.php'; ?>
-    <div class="contact-title">
-        <h1>CONTACT</h1>
-        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get in Touch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>CONTACT</title>
 </head>
 <body>
 
-    <section class="contact-form">
-        <h1>Get in Touch</h1>
-        <p>Have questions or need assistance? Get in touch with our team—we are here to help with fast, friendly support!</p>
+    <?php include 'nav/navbar.php'; ?>
+    <main> 
 
-        <form id="contactForm">
-            <label for="name">Contact Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+        <div class="contact-container">
+            <h1 class="contact-title">CONTACT</h1>
+        </div>
 
-            <label for="street">Street</label>
-            <input type="text" id="street" name="street" placeholder="Street address" required>
+        <div class="SES-container">
+        <h3>Get in <span class="highlight">Touch</span></h3>
+            <p class="page-p">
+                Have questions or need assistance? Get in touch with our team-we are
+                here to help with fast, fiendly support!
+            </p>
+        </div:>
+        
+        <div class="form-group">
+    <div><h3 for="contact-name">Contact Name</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" placeholder="City" required>
+        
+        <div class="form-group">
+    <div><h3 for="contact-name">Street</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
-            <label for="zip">Zip</label>
-            <input type="text" id="zip" name="zip" placeholder="Zipcode" required>
+        <div class="form-group">
+    <div><h3 for="contact-name">City</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
-            <label for="phone">Contact Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="+31 6 12 12 12 12" required>
+<div class="form-group">
+    <div><h3 for="contact-name">Zip</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
+<div class="form-group">
+    <div><h3 for="contact-name">Contact phone</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+<div class="form-group">
+    <div><h3 for="contact-name">E-mail</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
 
-            <label for="file">Upload Additional File (Max 10MB)</label>
-            <input type="file" id="file" name="file" accept=".doc,.pdf,.jpg,.png" required>
+<div class="form-group">
+    <div><h3 for="contact-name">Message</h3></div>
+    <input type="text" id="contact-name" name="contact-name" placeholder="">
+</div>
+<div class="form-group file-upload">
+    <label for="file-upload" class="upload-label">
+        <input type="file" id="file-upload">
+        <span class="upload-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v6z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v4m0 0l-2-2m2 2l2-2"/>
+            </svg>
+            Upload Additional file
+        </span>
+    </label>
+    <p class="file-info">Attach file. File size of your documents should not exceed 10MB.</p>
+</div>
 
-            <label>
-                <input type="checkbox" id="nda" name="nda">
-                I want to protect my data by signing an NDA
-            </label>
+<div class="form-group">
+    <input type="checkbox" id="nda">
+    <label for="nda">I want to protect my data by signing an NDA</label>
+</div>
 
-            <button type="submit">Submit</button>
-        </form>
+<button type="submit" class="submit-btn">SUBMIT</button>
 
-        <section class="contact-info">
-            <h2>Our Team</h2>
-            <div class="team-member">
-                <h3>Suzan Jong</h3>
-                <p>Sales</p>
-                <p>Phone: +31 6 12 12 12 12</p>
-                <p>Email: <a href="mailto:Suzan@sunny.com">Suzan@sunny.com</a></p>
-            </div>
 
-            <div class="team-member">
-                <h3>John Smit</h3>
-                <p>Marketing</p>
-                <p>Phone: +31 6 12 34 56 78</p>
-                <p>Email: <a href="mailto:John@sunny.com">John@sunny.com</a></p>
-            </div>
+<?php
+// Controleer of het formulier is ingediend
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            <div class="website">
-                <p>Visit us at: <a href="https://sunny.com">sunny.com</a></p>
-            </div>
-        </section>
-    </section>
+    // Controleer of er een bestand is geüpload
+    if (isset($_FILES['file-upload']) && $_FILES['file-upload']['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['file-upload']['tmp_name'];
+        $fileName = $_FILES['file-upload']['name'];
+        $fileSize = $_FILES['file-upload']['size'];
+        $fileType = $_FILES['file-upload']['type'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
 
-    <script src="script.js"></script>
+        // Bestandsextensies die toegestaan zijn
+        $allowedfileExtensions = array('jpg', 'png', 'pdf', 'doc', 'docx');
+
+        if (in_array($fileExtension, $allowedfileExtensions)) {
+            // Controleer of de bestandsgrootte kleiner is dan 10MB (10*1024*1024 = 10485760 bytes)
+            if ($fileSize < 10485760) {
+                // Bepaal de uploadmap
+                $uploadFileDir = './uploaded_files/';
+                $dest_path = $uploadFileDir . $fileName;
+
+                // Verplaats het bestand naar de uiteindelijke locatie
+                if(move_uploaded_file($fileTmpPath, $dest_path)) {
+                    $message = 'File is successfully uploaded.';
+                } else {
+                    $message = 'There was an error moving the uploaded file.';
+                }
+            } else {
+                $message = 'Error: File size exceeds the 10MB limit.';
+            }
+        } else {
+            $message = 'Error: Only ' . implode(", ", $allowedfileExtensions) . ' files are allowed.';
+        }
+    } else {
+        $message = 'Error: No file uploaded or there was an upload error.';
+    }
+
+    // Verwerk andere formuliergegevens
+    $contactName = isset($_POST['contact-name']) ? $_POST['contact-name'] : '';
+    $ndaSigned = isset($_POST['nda']) ? 'Yes' : 'No';
+
+    // Opslaan van formuliergegevens kan hier (bijv. in een database)
+
+    // Laat de boodschap zien
+    echo $message;
+    echo "<br>Contact Name: " . htmlspecialchars($contactName);
+    echo "<br>NDA Signed: " . $ndaSigned;
+}
+?>
+
+    </main>
+
+    <?php include 'nav/footer.php'; ?>
+
 </body>
 </html>

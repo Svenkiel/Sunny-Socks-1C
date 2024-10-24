@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
     <link rel="stylesheet" href="css/login.css" type="text/css">
     <title>Login</title>
 </head>
@@ -44,21 +45,21 @@
         </div>
     <?php else: ?>
         <div>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form-grid">
                 <div class="form-field">
                     <div class="login-form">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" required>
+                        <input type="text" name="email" id="email" class="input-field" required>
                     </div>
                     <div class="login-form">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" name="password" id="password" class="input-field" required>
                     </div>
-                    <div class="login-register">
+                    <div class="submit-field">
                         <input type="submit" value="Login" class="submit">
                     </div>
                     <?php if (!empty($errorMessage)): ?>
-                        <p style="color: red;"><?php echo $errorMessage; ?></p>
+                        <p class="error-message"><?php echo $errorMessage; ?></p>
                     <?php endif; ?>
                 </div>
             </form>
@@ -66,6 +67,7 @@
         </div>
     <?php endif; ?>
 </main>
+<?php include 'nav/footer.php'; ?>
 
 </body>
 </html>
