@@ -43,7 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/checkout.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css"> 
     <title>Checkout</title>
 </head>
 <body>
@@ -436,4 +437,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </body>
+
+<?php include 'nav/footer.php'; ?>
+
 </html>

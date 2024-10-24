@@ -52,7 +52,7 @@
 
                 <div class="footer-column">
                     <h3>JOIN OUR MAILING LIST</h3>
-                    <form>
+                    <form class="footer-form">
                         <input type="email" placeholder="Email">
                         <button type="submit">Subscribe</button>
                     </form>
