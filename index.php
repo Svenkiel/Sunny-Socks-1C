@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <title>Home</title>
 </head>
@@ -21,7 +22,7 @@
                     $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
 
                     if($email == !false){
-                        echo 'Here is your coupon:';
+                        echo 'Thank you! Here is your coupon:';
                     }
                     else{
                         echo 'Please use a valid email adress';
@@ -136,9 +137,11 @@
             </div>
 
 
-
+        
         </div>
+
     </main>
+    <?php include 'nav/footer.php'; ?>
 
     <script>
         var popup = document.getElementsByClassName("popup")[0];
@@ -187,7 +190,6 @@
                         });
                     }
                 });
-
 
     </script>
 
