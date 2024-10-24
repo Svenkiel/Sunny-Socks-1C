@@ -4,8 +4,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = $_POST['first-name'] ?? '';
     $lastName = $_POST['last-name'] ?? '';
     $companyName = $_POST['company-name'] ?? '';
+    $country = $_POST['country'] ?? '';
     $address = $_POST['address'] ?? '';
     $town = $_POST['town'] ?? '';
+    $province = $_POST['province'] ?? '';
     $zipCode = $_POST['zip-code'] ?? '';
     $phoneNumber = $_POST['phone-number'] ?? '';
     $email = $_POST['email'] ?? '';
@@ -14,8 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $firstName,
         $lastName,
         $companyName,
+        $country,
         $address,
         $town,
+        $province,
         $zipCode,
         $phoneNumber,
         $email
@@ -350,12 +354,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 <div class="form-group">
                     <label for="zip-code">ZIP Code</label>
-                    <input type="text" name="zip-code" id="zip-code"/>
+                    <input type="text" name="zip-code" id="zip-code" placeholder="1234 AB"/>
                 </div>
 
                 <div class="form-group">
                     <label for="phone-number">Phone</label>
-                    <input type="text" name="phone-number" id="phone-number"/>
+                    <input type="text" name="phone-number" id="phone-number" placeholder="+1234567890"/>
                 </div>
 
                 <div class="form-group extra-margin">
