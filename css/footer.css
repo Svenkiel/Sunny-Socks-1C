@@ -95,19 +95,19 @@ footer {
     margin-left: 10px;
 }
 
-form {
+.footer-form {
     display: flex;
     align-items: center;
 }
 
-form input[type="email"] {
+.footer-form input[type="email"] {
     padding: 5px;
     border: 1px solid #00266B;
     border-radius: 3px;
     margin-right: 10px;
 }
 
-form button {
+.footer-form button {
     background-color: #00266B;
     color: white;
     padding: 5px 10px;
@@ -116,7 +116,7 @@ form button {
     border-radius: 3px;
 }
 
-form button:hover {
+.footer-form button:hover {
     background-color: #0047CC;
 }
 
