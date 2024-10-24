@@ -176,6 +176,10 @@ body {
     background-color: white;
 }
 
+.form-group > input::placeholder {
+    color: #9F9F9F;
+}
+
 button {
     display: none;
 }
