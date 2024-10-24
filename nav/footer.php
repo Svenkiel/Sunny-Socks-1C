@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/footer.css" type="text/css">
-    <title>Footer</title>
-</head>
 <body>
     <footer>
         <div class="footer-container">
@@ -60,7 +52,7 @@
 
                 <div class="footer-column">
                     <h3>JOIN OUR MAILING LIST</h3>
-                    <form>
+                    <form class="footer-form">
                         <input type="email" placeholder="Email">
                         <button type="submit">Subscribe</button>
                     </form>
@@ -74,6 +66,4 @@
             <a href="#">Cookies</a>
         </div>
     </footer>
-</body>
-</html>
-        
+</body>     
