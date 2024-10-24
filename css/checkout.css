@@ -112,6 +112,22 @@ body {
     color: white;
 }
 
+.cart-counter {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: red; 
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none; 
+}
+
+.cart-counter.active {
+    display: inline; 
+}
+
 .checkout-title-container {
     grid-column: 2/3;
     padding-top: 75px;
@@ -180,7 +196,7 @@ body {
     color: #9F9F9F;
 }
 
-button {
+#submit-button {
     display: none;
 }
 
