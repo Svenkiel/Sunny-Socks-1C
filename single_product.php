@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/catalogue.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer.css" type>
     <title>Product Details</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
             1 => [
                 "name" => "Uniform colour socks",
                 "description" => "Available in multiple colours, made from high quality organic cotton",
-                "price" => "€18.99",
+                "price" => "€10.00",
                 "image" => "img/Sunny_socks_uni_blue.jpg",
                 "sizes" => ["S", "M", "L"],
                 "colors" => [
@@ -31,7 +31,7 @@
             2 => [
                 "name" => "Classic strip socks",
                 "description" => "Available in multiple colours, made from high quality organic cotton",
-                "price" => "€18.99",
+                "price" => "€13.00",
                 "image" => "img/Sunny_socks_blue.jpg",
                 "sizes" => ["S", "M", "L"],
                 "colors" => [
@@ -45,7 +45,7 @@
             3 => [
                 "name" => "Military grade socks",
                 "description" => "Available in black only, made from high quality organic cotton",
-                "price" => "€22.50",
+                "price" => "€22.00",
                 "image" => "img/military_socks.jpg",
                 "sizes" => ["S", "M", "L"],
                 "colors" => [
@@ -55,7 +55,7 @@
             4 => [
                 "name" => "Construction socks",
                 "description" => "Available in black only, made from high quality organic cotton",
-                "price" => "€19.99",
+                "price" => "€20.00",
                 "image" => "img/construction_socks.jpg",
                 "sizes" => ["S", "M", "L"],
                 "colors" => [
@@ -65,7 +65,7 @@
             5 => [
                 "name" => "Oil & Gas socks",
                 "description" => "Available in black only, made from high quality organic cotton",
-                "price" => "€19.99",
+                "price" => "€20.00",
                 "image" => "img/oil_gas_socks.jpg",
                 "sizes" => ["S", "M", "L"],
                 "colors" => [
@@ -278,6 +278,17 @@
                 button.addEventListener('click', function() {
                     const newImage = this.getAttribute('data-image');
                     document.getElementById('product-image').src = newImage;
+                });
+            });
+
+            const sizeButtons = document.querySelectorAll('.size-button');
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    sizeButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to the clicked button
+                    this.classList.add('active');
                 });
             });
         });
