@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +8,39 @@
     <title>Login</title>
 </head>
 <body>
-
+    <!-- Header -->
     <?php include 'nav/navbar.php'; ?>
 
     <?php
+    /* Login status */
     $loginSuccess = false;
-    $errorMessage = '';
 
+    /* Error for wrong input */
+    $errorMessage = '';
+    
+    /* Checks if login is pressed */
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        /* Stores the input in a variable */
         $email = $_POST['email'];
         $password = $_POST['password'];
 
+        /* Valid email and password combinations */
         $validCredentials = [
             "user@user.com" => "user",
             "admin@admin.com" => "admin"
         ];
-
+        /* Checks if email and password are valid */
         if (isset($validCredentials[$email]) && $validCredentials[$email] === $password) {
+
+            /* Stores everything in front of @ in a variable */
             $username = strstr($email, '@', true);
+
+            /* Login status set to true */
             $loginSuccess = true;
+
         } else {
+            /* error message gets a value */
             $errorMessage = 'Invalid email or password.';
         }
     }
@@ -38,11 +51,14 @@
         <h1 class="title"><b>LOGIN</b></h1>
     </div>
     
+    <!-- Displayed after valid credentials -->
     <?php if ($loginSuccess): ?>
         <div class="login-success">
             <h1>Login successful! Welcome, <?php echo htmlspecialchars($username); ?>.</h1>
             <a href="index.php" class="home-btn">Home</a>
         </div>
+    
+    <!-- Displayed after invalid or no credentials -->
     <?php else: ?>
         <div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form-grid">
@@ -58,7 +74,9 @@
                     <div class="submit-field">
                         <input type="submit" value="Login" class="submit">
                     </div>
+                    
                     <?php if (!empty($errorMessage)): ?>
+                        <!-- error message for invalid credentials -->
                         <p class="error-message"><?php echo $errorMessage; ?></p>
                     <?php endif; ?>
                 </div>
@@ -67,6 +85,8 @@
         </div>
     <?php endif; ?>
 </main>
+
+<!-- Footer -->
 <?php include 'nav/footer.php'; ?>
 
 </body>
