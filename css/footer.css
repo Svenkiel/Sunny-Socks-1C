@@ -30,6 +30,7 @@ footer {
     padding: 40px 20px; /* Binnenruimte in de footer */
     color: #00266B; /* Tekstkleur in de footer */
     border-top: 2px solid #FECD3E; /* Gele bovenrand voor de footer */
+    margin-top: 100px;
 }
 
 .footer-logo {
