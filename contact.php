@@ -15,7 +15,7 @@
         </div>
 
         <section class="SES-container">
-            <h2 class="contact-title">Get in Touch</h2>
+            <h2 class="contact-title2">Get in Touch</h2>
             <p class="AIE-container">Have questions or need assistance? Get in touch with our team—we’re here to help with fast, friendly support!</p>
             <form method="post" enctype="multipart/form-data">
                 <?php 

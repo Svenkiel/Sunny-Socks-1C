@@ -105,6 +105,13 @@ main {
     display: inline-block;
 }
 
+.contact-title2 {
+    font-weight: bold;
+    color: #1d3d70;
+    padding-top: 30px;
+    display: inline-block;
+}
+
 .SES-container {
     grid-area: 2/1/2/2;
     text-align: left;
