@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer.css"> type=
     <title>CONTACT</title>
 </head>
 <body>
 
     <?php include 'nav/navbar.php'; ?>
     <main> 
-
+        
         <div class="contact-container">
             <h1 class="contact-title">CONTACT</h1>
         </div>
 
         <div class="SES-container">
-        <h3>Get in <span class="highlight">Touch</span></h3>
-            <p class="page-p">
-                Have questions or need assistance? Get in touch with our team-we are
-                here to help with fast, fiendly support!
-            </p>
-        </div:>
+        <h2 class="contact-title">Get in Touch</h2>
         
+        
+        <div class="AIE-container">
+             Have questions or need assistance? Get in touch with our team-we are here to help with fast, friendly support!
+        </div>
+        <br>
+        
+
         <div class="form-group">
     <div><h3 for="contact-name">Contact Name</h3></div>
     <input type="text" id="contact-name" name="contact-name" placeholder="">
@@ -79,7 +81,6 @@
 </div>
 
 <button type="submit" class="submit-btn">SUBMIT</button>
-
 
 <?php
 // Controleer of het formulier is ingediend
