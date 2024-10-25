@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +8,27 @@
     <title>Home</title>
 </head>
 <body>
-
+    <!-- Header -->
     <?php include 'nav/navbar.php'; ?>
 
+    <!-- Popup -->
     <div class="popup">
         <div class="popup-content">
             <div class="close">&times;</div>
             <h1>10%</h1><h1 class="yellow-off"> OFF</h1>
             <p>Enter you Email and receive 10% off your next order.</p>
             <?php
+                /* Checks if continue is pressed */
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+                    /* Stores the email and checks if it's valid */
                     $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
 
+                    /* Displayed if the email is valid */
                     if($email == !false){
-                        echo 'Thank you! Here is your coupon:';
+                        echo 'Thank you! Your coupon will be send via email shortly';
                     }
+                    /* Displayed if the email is invalid */
                     else{
                         echo 'Please use a valid email adress';
                         echo '
@@ -36,6 +41,7 @@
                     }
                        
                 }
+                /* Displayed if continue is not pressed */
                 else{
                     echo '
                         <form action="' . $_SERVER['PHP_SELF']. '" method="POST">
@@ -53,6 +59,7 @@
 
 
     <main>
+        <!-- Top of home page -->
         <div class="home-top">
             <img src="img/Sunny_socks_blue.jpg" alt="Sok" class="background">
             <img src="img/sunny_logos_slogan_blue.png" alt="Sunny Socks" class="sunny-logo">
@@ -61,6 +68,7 @@
             sustainable products without delay, offering the perfect blend of quality, responsibility, and speed.</p>
             <a href="catalogue.php" class="catalogue-button"><b>CATALOGUE</b></a>
         </div>
+        <!-- Middle of home page -->
         <div class="home-middle">
             <h1 class="home-title"><b>WHY ORDER FROM US?</b></h1>
             <div class="points">
@@ -88,9 +96,11 @@
                 </div>
             </div>
         </div>
+        <!-- Bottom of home page -->
         <div class="home-bottom">
             <h1 class="home-title"><b>TESTIMONIALS</b></h1>
-
+            
+            <!-- Carousel -->
             <div class="carousel-container">
                 <button class="carousel-btn left-btn">&#8592;</button>
                 
@@ -141,9 +151,11 @@
         </div>
 
     </main>
+    <!-- Footer -->
     <?php include 'nav/footer.php'; ?>
 
     <script>
+        /* Javascript for popup */
         var popup = document.getElementsByClassName("popup")[0];
 
         var span = document.getElementsByClassName("close")[0];
@@ -161,7 +173,7 @@
             popup.style.display = "none";
         }
         }
-
+        /* Javascript for carousel */
         const carousel = document.querySelector('.carousel');
                 const leftBtn = document.querySelector('.left-btn');
                 const rightBtn = document.querySelector('.right-btn');

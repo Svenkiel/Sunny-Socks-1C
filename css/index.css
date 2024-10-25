@@ -14,124 +14,124 @@
     font-style: normal;
 }
 
-/* Reset alle marges en paddings naar 0 en maakt een box-sizing */
+/* Reset all margins and paddings to 0 and create a box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basis styling voor de body */
+/* Basic styling for the body */
 body {
-    font-family: 'Nexa', sans-serif; /* Nexa lettertype */
+    font-family: 'Nexa', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 /* Topbar Styling */
 .top-bar {
-    background-color: #FECD3E; /* Gele kleur achtergrond */
-    color: white; /* Witte tekstkleur */
-    text-align: center; /* Centraal uitlijnen van de tekst */
-    padding: 10px 0; /* Verticale padding van 10px */
-    font-size: 14px; /* Lettergrootte van 14px */
-    width: 100%; /* Volledige breedte van de pagina */
+    background-color: #FECD3E; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
 }
 
 /* Navbar Styling */
 .navbar {
-    display: flex; /* Gebruik flexbox voor lay-out */
-    justify-content: space-between; /* Verdeel items met ruimte ertussen */
-    align-items: center; /* Zorg ervoor dat alle items verticaal gecentreerd zijn */
-    background-color: white; /* Witte achtergrondkleur */
-    padding: 20px; /* Padding van 20px rondom */
-    border-bottom: 2px solid #FECD3E; /* Gele onderlijn */
-    width: 100%; /* Volledige breedte van de pagina */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 2px solid #FECD3E;
+    width: 100%;
 }
 
 /* Logo styling */
 .logo {
-    display: flex; /* Flexbox voor het logo */
-    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    max-height: 60px; /* Maximale hoogte van het logo is 60px */
-    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+    max-height: 60px;
+    width: auto;
 }
 
 .icon {
-    display: flex; /* Flexbox voor het logo */
-    align-items: center; /* Zorgt ervoor dat het logo verticaal gecentreerd wordt */
+    display: flex;
+    align-items: center;
 }
 
 .icon img {
-    max-height: 30px; /* Maximale hoogte van het logo is 60px */
-    width: auto; /* Breedte wordt automatisch aangepast om de verhouding te behouden */
+    max-height: 30px;
+    width: auto;
 }
 
 .icon img:hover {
-    cursor: pointer; /* Verander de cursor in een handje bij hover */
+    cursor: pointer;
 }
 
-/* Navigatielinks in het midden */
+/* Navigation links in the center */
 .nav-center {
-    list-style: none; /* Verwijder bullet points van de lijst */
-    display: flex; /* Zet de links naast elkaar */
-    gap: 20px; /* Ruimte van 20px tussen de links */
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-center li a {
-    text-decoration: none; /* Verwijder de onderstreping van de links */
-    color: #1C3D77; /* Donkerblauwe kleur voor de tekst */
-    font-weight: bold; /* Vette tekst */
+    text-decoration: none;
+    color: #1C3D77;
+    font-weight: bold;
 }
 
 .nav-center li a:hover {
-    text-decoration: underline; /* Onderstreep de link bij hover */
+    text-decoration: underline;
 }
 
-/* Rechterkant met iconen en de contactknop */
+/* Right side with icons and the contact button */
 .nav-right {
-    display: flex; /* Flexbox voor de iconen en contactknop */
-    align-items: center; /* Verticaal centreren van de iconen */
-    gap: 20px; /* Ruimte van 20px tussen de iconen en de knop */
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Styling van de contactknop */
+/* Contact button styling */
 .contact-button {
-    border: 2px solid #1C3D77; /* Donkerblauwe rand */
-    padding: 8px 16px; /* Padding rondom de knop */
-    border-radius: 5px; /* Ronde hoeken van 5px */
-    background-color: white; /* Witte achtergrond */
-    color: #1C3D77; /* Donkerblauwe tekstkleur */
-    text-decoration: none; /* Verwijder de onderstreping van de link */
-    font-weight: bold; /* Vette tekst */
+    border: 2px solid #1C3D77;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: white;
+    color: #1C3D77;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .contact-button:hover {
-    background-color: #1C3D77; /* Donkerblauwe achtergrond bij hover */
-    color: white; /* Witte tekstkleur bij hover */
+    background-color: #1C3D77;
+    color: white;
 }
 
+/* Styling cart counter */
 .cart-counter {
     position: absolute;
     top: 55px;
     right: 10px;
-    background-color: red; 
+    background-color: red;
     color: white;
     border-radius: 50%;
     padding: 2px 6px;
     font-size: 12px;
-    display: none; 
+    display: none;
 }
 
 .cart-counter.active {
-    display: inline; 
+    display: inline;
 }
 
 main {
-    margin: 1em;
     padding: 6em 10em;
 }
 
@@ -147,6 +147,7 @@ main {
     color: #1C3D77;
 }
 
+/* Styling sock photo */
 .background {
     position: absolute;
     z-index: -1;
@@ -159,6 +160,7 @@ main {
     width: 650px;
 }
 
+/* Styling catalogue button */
 .catalogue-button {
     text-decoration: none;
     background-color: #1C3D77;
@@ -169,7 +171,7 @@ main {
 }
 
 .catalogue-button:hover {
-    background-color: #152f5d; 
+    background-color: #152f5d;
 }
 
 .home-middle {
@@ -178,13 +180,15 @@ main {
     margin-top: 5rem;
 }
 
+/* Styling points */
 .points {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     color: #1C3D77;
 }
 
+/* Styling buttons near points */
 .points-btn {
     background-color: #FECD3E;
     border: none;
@@ -202,6 +206,7 @@ main {
     background-color: #ffbf00;
 }
 
+/* Styling titles */
 .home-title {
     color: #1C3D77;
     font-size: 56px;
@@ -214,23 +219,25 @@ main {
 }
 
 .points > div > h1 {
-    font-size: 56px;
+    font-size: 50px;
     margin-right: 1rem;
 }
 
 .points > div > h2 {
-    font-size: 36px;
+    font-size: 30px;
 }
 
+/* Yellow stripe under points */
 .point-one, .point-two {
     border-bottom: #FECD3E 1px solid;
     padding-bottom: 1rem;
 }
 
 .home-bottom {
-    margin-top: 5rem;
+    margin-top: 5rem; /* Extra white space */
 }
 
+/* Styling carousel */
 .carousel-container {
     display: flex;
     align-items: center;
@@ -277,7 +284,7 @@ main {
 }
 
 .carousel-btn:hover {
-    background-color: #ffbf00; 
+    background-color: #ffbf00;
 }
 
 .left-btn {
@@ -288,50 +295,52 @@ main {
     right: -50px;
 }
 
+/* Styling popup */
 .popup {
-    display: none; 
-    position: fixed; 
-    z-index: 2; 
+    display: none;
+    position: fixed;
+    z-index: 2;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
-  }
-  
-  .popup-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
     background-color: #1C3D77;
     margin: 15% auto;
     padding: 40px 20px;
-    width: 80%; 
+    width: 80%;
     max-width: 500px;
     border-radius: 8px;
     color: white;
     text-align: center;
-  }
+}
 
-  .popup-content > h1 {
+.popup-content > h1 {
     display: inline;
     font-size: 56px;
-  }
+}
 
-  .yellow-off {
+.yellow-off {
     color: #FECD3E;
-  }
+}
 
-  .popup-content > p {
+.popup-content > p {
     font-size: 24px;
-  }
+}
 
-  .popup-content > form {
+.popup-content > form {
     display: flex;
     flex-direction: column;
     width: 80%;
     max-width: 400px;
     margin: 0 auto;
-  }
+}
 
-  .form-input {
+/* Styling email input */
+.form-input {
     font-size: 20px;
     color: #1C3D77;
     outline: none;
@@ -339,9 +348,10 @@ main {
     border-radius: 4px;
     min-width: 350px;
     padding: 4px;
-  }
+}
 
-  .submit {
+/* Styling continue button popup */
+.submit {
     padding: 6px 0;
     background-color: #FECD3E;
     color: #1C3D77;
@@ -350,23 +360,22 @@ main {
     font-size: 30px;
     font-weight: bold;
     min-width: 350px;
-  }
+}
 
-  .popup-content > h1, p, input {
+.popup-content > h1, p, input {
     margin: 1rem 0;
-  }
-  
-  .close {
+}
+
+/* Styling close button in popup */
+.close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover, .close:focus {
+}
+
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
-
-  
+}

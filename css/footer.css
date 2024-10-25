@@ -1,137 +1,136 @@
 @font-face {
-    font-family: 'Nexa';
-    src: url('font/NexaBold.otf') format('opentype');
-    font-weight: bold;
+    font-family: 'Nexa'; /* Definieert het Nexa-lettertype */
+    src: url('font/NexaBold.otf') format('opentype'); /* Pad naar het Nexa Bold lettertypebestand */
+    font-weight: bold; /* Vetgedrukt lettertype */
     font-style: normal;
-    color: #1E407A;
 }
 
 @font-face {
-    font-family: 'Nexa';
-    src: url('font/NexaLight.otf') format('opentype');
-    font-weight: 300;
+    font-family: 'Nexa'; /* Definieert het Nexa-lettertype */
+    src: url('font/NexaLight.otf') format('opentype'); /* Pad naar het Nexa Light lettertypebestand */
+    font-weight: 300; /* Lichter lettertype */
     font-style: normal;
-    color: #1E407A;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Zorgt dat padding en border binnen de breedte vallen */
 }
 
 body {
-    font-family: 'Nexa', sans-serif;
+    font-family: 'Nexa', sans-serif; /* Toepassen van het Nexa-lettertype */
     margin: 0;
     padding: 0;
-    color: #1E407A;
+    color: #1E407A; /* Standaard tekstkleur */
 }
 
 footer {
-    background-color: #F9F9F9;
-    padding: 40px 20px;
-    color: #00266B;
+    background-color: #F9F9F9; /* Achtergrondkleur van de footer */
+    padding: 40px 20px; /* Binnenruimte in de footer */
+    color: #00266B; /* Tekstkleur in de footer */
+    border-top: 2px solid #FECD3E; /* Gele bovenrand voor de footer */
 }
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Logo wordt verticaal uitgelijnd */
     align-items: flex-start;
-    max-width: min-content;
-    border-bottom: 2px solid #00266B;
+    max-width: min-content; /* Maximale breedte van het logo is klein */
+    border-bottom: 2px solid #00266B; /* Blauwe onderlijn onder het logo */
 }
 
 .logo img {
-    max-height: 60px; /* Logo hoogte */
-    width: auto;
+    max-height: 60px; /* Maximale hoogte van het logo */
+    width: auto; /* Automatische breedte */
 }
 
 .footer-section h2 {
-    font-size: 2em;
-    border-bottom-color: #00266B;
-    margin-bottom: 20px;
+    font-size: 2em; /* Grotere titelgrootte */
+    border-bottom-color: #00266B; /* Blauwe onderlijn kleur */
+    margin-bottom: 20px; /* Onder marge voor ruimte */
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Verspreid de links evenredig */
     width: 100%;
     margin-top: 20px; 
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Zorgt dat de links zich op meerdere regels kunnen verdelen */
 }
 
 .footer-column {
-    margin-right: 40px;
+    margin-right: 40px; /* Ruimte tussen de kolommen in de footer */
 }
 
 .footer-column h3 {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Ruimte onder de kolomtitels */
 }
 
 .footer-column ul {
-    list-style: none;
+    list-style: none; /* Geen opsommingstekens voor de lijst */
 }
 
 .footer-column ul li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Ruimte tussen de items in de lijst */
 }
 
 .footer-column ul li a {
-    text-decoration: none;
-    color: #00266B;
+    text-decoration: none; /* Verwijdert de standaard onderstreping van links */
+    color: #00266B; /* Blauwe linkkleur */
 }
 
 .footer-column ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Onderstreping bij hover */
 }
 
 .social-icons a img {
-    width: 24px;
-    margin-right: 10px;
+    width: 24px; /* Afmeting van de social media iconen */
+    margin-right: 10px; /* Ruimte tussen de iconen */
 }
 
 .language-selector img {
-    width: 24px;
-    margin-left: 10px;
+    width: 24px; /* Afmeting van de vlagiconen */
+    margin-left: 10px; /* Ruimte naast de taaliconen */
 }
 
 .footer-form {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centreert de inhoud verticaal */
 }
 
 .footer-form input[type="email"] {
-    padding: 5px;
-    border: 1px solid #00266B;
-    border-radius: 3px;
-    margin-right: 10px;
+    padding: 5px; /* Binnenruimte in het inputveld */
+    border: 1px solid #00266B; /* Blauwe rand om het inputveld */
+    border-radius: 3px; /* Ronde hoeken voor het inputveld */
+    margin-right: 10px; /* Ruimte naast het inputveld */
 }
 
 .footer-form button {
-    background-color: #00266B;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
+    background-color: #00266B; /* Blauwe achtergrondkleur voor de knop */
+    color: white; /* Witte tekstkleur */
+    padding: 5px 10px; /* Binnenruimte in de knop */
+    border: none; /* Geen rand */
+    cursor: pointer; /* Verandert de cursor bij hover */
+    border-radius: 3px; /* Ronde hoeken voor de knop */
 }
 
 .footer-form button:hover {
-    background-color: #0047CC;
+    background-color: #0047CC; /* Donkerdere blauwe kleur bij hover */
 }
 
 .footer-bottom {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
+    justify-content: flex-end; /* Plaatst de items aan het uiteinde van de footer */
+    margin-top: 30px; /* Ruimte boven de onderste sectie van de footer */
 }
 
 .footer-bottom a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #00266B;
+    margin-left: 20px; /* Ruimte tussen de links */
+    text-decoration: none; /* Geen onderstreping */
+    color: #00266B; /* Blauwe linkkleur */
 }
 
 .footer-bottom a:hover {
-    text-decoration: underline; 
+    text-decoration: underline; /* Onderstreping bij hover */
 }

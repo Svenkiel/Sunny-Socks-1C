@@ -14,14 +14,14 @@
     font-style: normal;
 }
 
-/* Reset alle marges en paddings naar 0 en maakt een box-sizing */
+/* Reset all margins and paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basis styling voor de body */
+/*Body styling*/
 body {
     font-family: 'Nexa', sans-serif; /* Nexa lettertype */
     color: #1C3D77;
@@ -30,7 +30,7 @@ body {
     background-position: center 300px; 
 }
 
-/*Title section*/
+/* Title section */
 .title-wrapper {
     display: grid;
     gap: 20px;
@@ -39,6 +39,7 @@ body {
     margin: 0 auto;
 }
 
+/* About Us container */
 .aboutus-container {
     text-align: left;
     padding-top: 100px;
@@ -46,6 +47,7 @@ body {
     
 }
 
+/* About Us Title */
 .aboutus-title {
     font-weight: bold;
     border-top: 5px solid #1d3d70;
@@ -53,7 +55,7 @@ body {
     display: inline-block;
 }
 
-/* Layout for the introductory text */
+/* Introduction container */
 .intro-container {
     display: grid;
     background-color: rgba(255, 255, 255, 80%);
@@ -61,34 +63,23 @@ body {
     padding: 40px;
     margin-left: 190px;
     width: 20%;
-}
-
-/*Styling for the headings within the introduction container*/
-.intro-text > h2 {
-    display: grid;
     text-align: center;
-    display: inline-block;
+
 }
 
-/*Styling for the paragraphs within the introduction container*/
-.intro-text > p {
-    display: grid;
-    text-align: center;
-}
-
-/*Main layout*/
+/*Main grid layout*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin: 0 auto;
     width: 75%;
+    margin: 0 auto;
     margin-top: 400px;
     padding-top: 150px;
     padding-bottom: 100px;
 }
 
-/*Styling for the horizontal line across the page*/
+/* Horizontal line in grid */
 .grid-container > hr {
     grid-column: 1 / -1;
     border-style: solid;
@@ -98,16 +89,15 @@ body {
     margin-top: 100px;
 }
 
-/* Styling for images within the grid*/
+/* Images within the grid */
 .grid-container > img {
     border-radius: 10px;
     margin-top: 100px;
     outline: 4px solid #1C3D77;
     justify-self: center;
-    text-align: center; /* Ensures text content is centered as well */
 }
 
-/*Items within grid, specifically styling the headings*/
+/* Grid items */
 .grid-item > h2 {
     display: grid;
     padding-bottom: 50px;
@@ -115,7 +105,6 @@ body {
     text-align: center;
 }
 
-/* Items within grid, specifically styling the paragraphs*/
 .grid-item > p {
     text-align: center;
     max-width: 50%; 

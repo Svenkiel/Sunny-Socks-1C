@@ -115,49 +115,53 @@ body {
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    width: 80%;
-    margin: 0 auto;
+    display: grid; /* Gebruikt een grid-layout voor het main-element */
+    grid-template-columns: repeat(2, 1fr); /* Twee gelijke kolommen in het grid */
+    gap: 20px; /* Ruimte tussen de grid-items */
+    padding: 20px; /* Binnenruimte rondom de inhoud */
+    width: 80%; /* De breedte van het main-element (80% van het scherm) */
+    margin: 0 auto; /* Centreert het main-element op de pagina */
 }
 
-/* Title Styling */
+/* Styling voor de container van de titel */
 .services-container {
-    text-align: left;
-    padding-top: 100px;
+    text-align: left; /* Tekst uitlijnen naar links */
+    padding-top: 100px; /* Extra ruimte boven de titel */
 }
 
-/* Pagina titel */
+/* Opmaak voor de paginatitel */
 .services-title {
-    font-weight: bold;
-    color: #1d3d70;
-    border-top: 5px solid #1d3d70;
-    padding-top: 10px;
-    display: inline-block;
+    font-weight: bold; /* Maakt de titel vetgedrukt */
+    color: #1d3d70; /* Donkerblauwe kleur voor de titel */
+    border-top: 5px solid #1d3d70; /* Blauwe bovenrand */
+    padding-top: 10px; /* Ruimte tussen de bovenrand en de tekst */
+    display: inline-block; /* Geeft inline-block gedrag voor marges */
 }
 
-.SES-container{
-    grid-area: 2/1/2/2;
-    text-align: left;
-    padding-top: 50px;
+/* Stijl voor de SES-sectie in het grid */
+.SES-container {
+    grid-area: 2/1/2/2; /* Positie in het grid: rij 2, kolom 1 */
+    text-align: left; /* Tekst uitlijnen naar links */
+    padding-top: 50px; /* Extra ruimte boven de inhoud */
 }
 
-.AIE-container{
-    grid-area: 3/2/4/3;
-    text-align: left;
-    padding-top: 50px;
+/* Stijl voor de AIE-sectie in het grid */
+.AIE-container {
+    grid-area: 3/2/4/3; /* Positie in het grid: van rij 3 tot rij 4, kolom 2 */
+    text-align: left; /* Tekst uitlijnen naar links */
+    padding-top: 50px; /* Extra ruimte boven de inhoud */
 }
 
-.HE-container{
-    grid-area: 4/1/4/2;
-    text-align: left;
-    padding-top: 50px;
+/* Stijl voor de HE-sectie in het grid */
+.HE-container {
+    grid-area: 4/1/4/2; /* Positie in het grid: rij 4, kolom 1 */
+    text-align: left; /* Tekst uitlijnen naar links */
+    padding-top: 50px; /* Extra ruimte boven de inhoud */
 }
 
-.EC-container{
-    grid-area: 5/2/6/3;
-    text-align: left;
-    padding-top: 50px;
+/* Stijl voor de EC-sectie in het grid */
+.EC-container {
+    grid-area: 5/2/6/3; /* Positie in het grid: van rij 5 tot rij 6, kolom 2 */
+    text-align: left; /* Tekst uitlijnen naar links */
+    padding-top: 50px; /* Extra ruimte boven de inhoud */
 }
