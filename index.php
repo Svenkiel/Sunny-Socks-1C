@@ -75,24 +75,18 @@
                 <div class="point-one">
                     <h1><b>01</b></h1>
                     <h2><b>Fast Shipping</b></h2>
-                    <a href="services.php">
-                        <button class="points-btn">&#8592;</button>
-                    </a>
+                    <a href="services.php" class="points-btn">&#8592;</a>
                     <p>Socks Express Service is a fast and convenient solution for delivering high-quality socks directly to customers' doors.</p>
                 </div>
                 <div class="point-two">
                     <h1><b>02</b></h1>
                     <h2><b>Easy and Fast Contact</b></h2>
-                    <a href="contact.php">
-                        <button class="points-btn">&#8592;</button>
-                    </a>
+                    <a href="contact.php" class="points-btn">&#8592;</a>
                 </div>
                 <div class="point-three">
                     <h1><b>03</b></h1>
                     <h2><b>Ethical and Sustainable Socks</b></h2>
-                    <a href="about.php">
-                        <button class="points-btn">&#8592;</button>
-                    </a>
+                    <a href="about.php" class="points-btn">&#8592;</a>
                 </div>
             </div>
         </div>
@@ -102,7 +96,7 @@
             
             <!-- Carousel -->
             <div class="carousel-container">
-                <button class="carousel-btn left-btn">&#8592;</button>
+                <a class="carousel-btn left-btn">&#8592;</a>
                 
                 <div class="carousel">
                     <div class="carousel-item">
@@ -143,7 +137,7 @@
                     </div>
                 </div>
 
-                <button class="carousel-btn right-btn">&#8594;</button>
+                <a class="carousel-btn right-btn">&#8594;</a>
             </div>
 
 
