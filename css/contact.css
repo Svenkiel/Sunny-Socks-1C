@@ -180,3 +180,19 @@ main {
 .form-group input[type="checkbox"] {
     margin-right: 10px;
 }
+
+.cart-counter {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: red; 
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none; 
+}
+
+.cart-counter.active {
+    display: inline; 
+}
