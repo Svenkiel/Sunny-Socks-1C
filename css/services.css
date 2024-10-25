@@ -143,6 +143,7 @@ main {
     grid-area: 2/1/2/2; /* Positie in het grid: rij 2, kolom 1 */
     text-align: left; /* Tekst uitlijnen naar links */
     padding-top: 50px; /* Extra ruimte boven de inhoud */
+    border-bottom: 2px solid yellow;
 }
 
 /* Stijl voor de AIE-sectie in het grid */
@@ -150,6 +151,7 @@ main {
     grid-area: 3/2/4/3; /* Positie in het grid: van rij 3 tot rij 4, kolom 2 */
     text-align: left; /* Tekst uitlijnen naar links */
     padding-top: 50px; /* Extra ruimte boven de inhoud */
+    border-bottom: 2px solid yellow;
 }
 
 /* Stijl voor de HE-sectie in het grid */
@@ -157,6 +159,7 @@ main {
     grid-area: 4/1/4/2; /* Positie in het grid: rij 4, kolom 1 */
     text-align: left; /* Tekst uitlijnen naar links */
     padding-top: 50px; /* Extra ruimte boven de inhoud */
+    border-bottom: 2px solid yellow;
 }
 
 /* Stijl voor de EC-sectie in het grid */
@@ -164,6 +167,7 @@ main {
     grid-area: 5/2/6/3; /* Positie in het grid: van rij 5 tot rij 6, kolom 2 */
     text-align: left; /* Tekst uitlijnen naar links */
     padding-top: 50px; /* Extra ruimte boven de inhoud */
+    border-bottom: 2px solid yellow;
 }
 
 .cart-counter {
