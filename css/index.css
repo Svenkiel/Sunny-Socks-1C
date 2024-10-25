@@ -200,7 +200,9 @@ main {
     color: white;
     right: 200px;
     transform: rotate(140deg);
+    text-decoration: none;
 }
+
 
 .points-btn:hover {
     background-color: #ffbf00;

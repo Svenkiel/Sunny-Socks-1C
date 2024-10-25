@@ -75,6 +75,7 @@
                         <input type="submit" value="Login" class="submit">
                     </div>
                     
+                    <!-- Displayed if errorMessage variable is not empty -->
                     <?php if (!empty($errorMessage)): ?>
                         <!-- error message for invalid credentials -->
                         <p class="error-message"><?php echo $errorMessage; ?></p>
