@@ -1,0 +1,383 @@
+/* Nexa Bold */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Nexa Light */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Reset all margins and paddings to 0 and create a box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Nexa', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Topbar Styling */
+.top-bar {
+    background-color: #FECD3E; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 2px solid #FECD3E;
+    width: 100%;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon img {
+    max-height: 30px;
+    width: auto;
+}
+
+.icon img:hover {
+    cursor: pointer;
+}
+
+/* Navigation links in the center */
+.nav-center {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: #1C3D77;
+    font-weight: bold;
+}
+
+.nav-center li a:hover {
+    text-decoration: underline;
+}
+
+/* Right side with icons and the contact button */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contact button styling */
+.contact-button {
+    border: 2px solid #1C3D77;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: white;
+    color: #1C3D77;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #1C3D77;
+    color: white;
+}
+
+/* Styling cart counter */
+.cart-counter {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none;
+}
+
+.cart-counter.active {
+    display: inline;
+}
+
+main {
+    padding: 6em 10em;
+}
+
+.home-top{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 60%;
+}
+
+.home-top > p {
+    font-size: 24px;
+    color: #1C3D77;
+}
+
+/* Styling sock photo */
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 750px;
+    top: 14rem;
+    right: 5rem;
+}
+
+.sunny-logo {
+    width: 650px;
+}
+
+/* Styling catalogue button */
+.catalogue-button {
+    text-decoration: none;
+    background-color: #1C3D77;
+    border-radius: 4px;
+    color: #FECD3E;
+    width: fit-content;
+    padding: 18px 40px;
+}
+
+.catalogue-button:hover {
+    background-color: #152f5d;
+}
+
+.home-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+}
+
+/* Styling points */
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #1C3D77;
+}
+
+/* Styling buttons near points */
+.points-btn {
+    background-color: #FECD3E;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    right: 200px;
+    transform: rotate(140deg);
+    text-decoration: none;
+}
+
+
+.points-btn:hover {
+    background-color: #ffbf00;
+}
+
+/* Styling titles */
+.home-title {
+    color: #1C3D77;
+    font-size: 56px;
+    width: 300px;
+    border-top: 5px solid #1d3d70;
+}
+
+.points > div > h1, h2 {
+    display: inline;
+}
+
+.points > div > h1 {
+    font-size: 50px;
+    margin-right: 1rem;
+}
+
+.points > div > h2 {
+    font-size: 30px;
+}
+
+/* Yellow stripe under points */
+.point-one, .point-two {
+    border-bottom: #FECD3E 1px solid;
+    padding-bottom: 1rem;
+}
+
+.home-bottom {
+    margin-top: 5rem; /* Extra white space */
+}
+
+/* Styling carousel */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 70%;
+    max-width: 1200px;
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    background-color: #1C3D77;
+    color: #FECD3E;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.carousel-item > h3 {
+    margin-bottom: 2em;
+}
+
+.carousel-btn {
+    background-color: #FECD3E;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 50%;
+    color: white;
+}
+
+.carousel-btn:hover {
+    background-color: #ffbf00;
+}
+
+.left-btn {
+    left: -50px;
+}
+
+.right-btn {
+    right: -50px;
+}
+
+/* Styling popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #1C3D77;
+    margin: 15% auto;
+    padding: 40px 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.popup-content > h1 {
+    display: inline;
+    font-size: 56px;
+}
+
+.yellow-off {
+    color: #FECD3E;
+}
+
+.popup-content > p {
+    font-size: 24px;
+}
+
+.popup-content > form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Styling email input */
+.form-input {
+    font-size: 20px;
+    color: #1C3D77;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    min-width: 350px;
+    padding: 4px;
+}
+
+/* Styling continue button popup */
+.submit {
+    padding: 6px 0;
+    background-color: #FECD3E;
+    color: #1C3D77;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 30px;
+    font-weight: bold;
+    min-width: 350px;
+}
+
+.popup-content > h1, p, input {
+    margin: 1rem 0;
+}
+
+/* Styling close button in popup */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

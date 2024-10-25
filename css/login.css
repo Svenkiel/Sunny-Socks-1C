@@ -1,0 +1,223 @@
+/* Nexa Bold */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Nexa Light */
+@font-face {
+    font-family: 'Nexa';
+    src: url('font/NexaLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Reset all margins and paddings to 0 and apply box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Nexa', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Top bar styling */
+.top-bar {
+    background-color: #FECD3E; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    font-size: 14px; 
+    width: 100%; 
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: white; 
+    padding: 20px; 
+    border-bottom: 2px solid #FECD3E; 
+    width: 100%; 
+}
+
+/* Logo styling */
+.logo {
+    display: flex; 
+    align-items: center; 
+}
+
+.logo img {
+    max-height: 60px; 
+    width: auto; 
+}
+
+.icon {
+    display: flex; 
+    align-items: center; 
+}
+
+.icon img {
+    max-height: 30px; 
+    width: auto; 
+}
+
+.icon img:hover {
+    cursor: pointer; 
+}
+
+/* Navigation links in the center */
+.nav-center {
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: #1C3D77;
+    font-weight: bold; 
+}
+
+.nav-center li a:hover {
+    text-decoration: underline; 
+}
+
+/* Right side with icons and the contact button */
+.nav-right {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+/* Styling contact button */
+.contact-button {
+    border: 2px solid #1C3D77; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+    background-color: white; 
+    color: #1C3D77; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.contact-button:hover {
+    background-color: #1C3D77; 
+    color: white; 
+}
+
+/* Styling cart counter */
+.cart-counter {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: red; 
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none; 
+}
+
+.cart-counter.active {
+    display: inline; 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: 5rem 0 15rem 0;
+}
+
+h1 {
+    color: #1C3D77;
+    margin: 100px auto;
+}
+
+/* Styling page title */
+.title {
+    color: #1C3D77;
+    border-top: 5px solid #1C3D77;
+    display: inline;
+    text-align: center;
+    margin-left: 3rem;
+}
+
+/* Styling form field */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.form-field {
+    grid-column: 2/4;
+    margin-top: 7rem;
+}
+
+label, a {
+    color: #1C3D77;
+}
+
+.input-field, label {
+    max-width: 400px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Styling login button */
+.submit-field > input {
+    border: none;
+    outline: none;
+    padding: 5px 30px;
+    font-size: 24px;
+    background-color: #1C3D77;
+    border-radius: 4px;
+    color: #FECD3E;
+    cursor: pointer;
+}
+
+/* Yellow border at the bottom of the input field */
+.login-form > input {
+    border: none;
+    outline: none;
+    border-bottom: 1px #FECD3E solid;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling home button upon successful login */
+.home-btn {
+    background-color: #1C3D77;
+    padding: 12px 40px;
+    color: #FECD3E;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.home-btn:hover {
+    background-color: #152f5d; 
+}
+
+.login-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styling for error message */
+.error-message {
+    color: red;
+}
