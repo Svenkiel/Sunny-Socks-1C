@@ -49,6 +49,10 @@
                 <button type="submit" class="submit-btn">SUBMIT</button>
             </form>
 
+            <div class="Suzan_John">
+            <img src="img/Suzan_John.png" alt="Suzan John">
+            </div>
+
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (isset($_FILES['file-upload']) && $_FILES['file-upload']['error'] === UPLOAD_ERR_OK) {
