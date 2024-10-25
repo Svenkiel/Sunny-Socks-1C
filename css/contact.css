@@ -203,3 +203,10 @@ main {
 .cart-counter.active {
     display: inline; 
 }
+
+.Suzan_John {
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+    padding-top: 20px;
+}
