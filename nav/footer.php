@@ -3,7 +3,7 @@
         <div class="footer-container">
             
             <!-- Logo sectie -->
-            <div class="logo">
+            <div class="footer-logo">
                 <img src="img/footer/sunny_logos_blue.png" alt="Logo">
             </div>
 
@@ -46,9 +46,9 @@
                     <h3>OUR SOCIALS</h3>
                     <div class="social-icons">
                         <!-- Social media iconen -->
-                        <a href="#"><img src="img/footer/social-media.png" alt="Facebook"></a>
-                        <a href="#"><img src="img/footer/twitter.png" alt="Twitter"></a>
-                        <a href="#"><img src="img/footer/instagram.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/"><img src="img/footer/social-media.png" alt="Facebook"></a>
+                        <a href="https://x.com/?lang=en"><img src="img/footer/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/"><img src="img/footer/instagram.png" alt="Instagram"></a>
                     </div>
                     <div class="language-selector">
                         <span>Language:</span>

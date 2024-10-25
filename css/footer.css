@@ -32,7 +32,7 @@ footer {
     border-top: 2px solid #FECD3E; /* Gele bovenrand voor de footer */
 }
 
-.logo {
+.footer-logo {
     display: flex;
     flex-direction: column; /* Logo wordt verticaal uitgelijnd */
     align-items: flex-start;
@@ -40,7 +40,7 @@ footer {
     border-bottom: 2px solid #00266B; /* Blauwe onderlijn onder het logo */
 }
 
-.logo img {
+.footer-logo img {
     max-height: 60px; /* Maximale hoogte van het logo */
     width: auto; /* Automatische breedte */
 }
